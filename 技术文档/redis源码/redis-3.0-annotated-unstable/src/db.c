@@ -49,6 +49,7 @@ void slotToKeyFlush(void);
 robj *lookupKey(redisDb *db, robj *key) {
 
     // 查找键空间
+    //循环遍历
     dictEntry *de = dictFind(db->dict,key->ptr);
 
     // 节点存在

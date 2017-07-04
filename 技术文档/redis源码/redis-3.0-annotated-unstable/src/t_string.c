@@ -214,7 +214,7 @@ int getGenericCommand(redisClient *c) {
         return REDIS_OK;
     }
 }
-
+//客户端获取函数
 void getCommand(redisClient *c) {
     getGenericCommand(c);
 }

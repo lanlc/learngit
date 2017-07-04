@@ -248,8 +248,10 @@ static dictEntry *dictFind(dict *ht, const void *key) {
     h = dictHashKey(ht, key) & ht->sizemask;
     he = ht->table[h];
     while(he) {
+        //比较节点的值
         if (dictCompareHashKeys(ht, key, he->key))
             return he;
+            //赋值下一个值
         he = he->next;
     }
     return NULL;

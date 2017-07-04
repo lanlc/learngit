@@ -178,6 +178,9 @@ struct redisCommand *commandTable;
  *    使得在集群模式下，一个被标示为 importing 的槽可以接收这命令。
  */
 struct redisCommand redisCommandTable[] = {
+    //命令名字、指向命令的实现函数的指针
+    //参数个数、FLAG
+    //
     {"get",getCommand,2,"r",0,NULL,1,1,1,0,0},
     {"set",setCommand,-3,"wm",0,NULL,1,1,1,0,0},
     {"setnx",setnxCommand,3,"wm",0,NULL,1,1,1,0,0},

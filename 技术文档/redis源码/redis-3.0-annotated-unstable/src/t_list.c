@@ -51,7 +51,7 @@ void listTypeTryConversion(robj *subject, robj *value) {
     if (subject->encoding != REDIS_ENCODING_ZIPLIST) return;
 
     if (sdsEncodedObject(value) &&
-        // 看字符串是否过长
+        // 看字符串是否过长 64字节
         sdslen(value->ptr) > server.list_max_ziplist_value)
             // 将编码转换为双端链表
             listTypeConvert(subject,REDIS_ENCODING_LINKEDLIST);
@@ -83,7 +83,7 @@ void listTypePush(robj *subject, robj *value, int where) {
         ziplistLen(subject->ptr) >= server.list_max_ziplist_entries)
             listTypeConvert(subject,REDIS_ENCODING_LINKEDLIST);
 
-    // ZIPLIST
+    // 压缩链表
     if (subject->encoding == REDIS_ENCODING_ZIPLIST) {
         int pos = (where == REDIS_HEAD) ? ZIPLIST_HEAD : ZIPLIST_TAIL;
         // 取出对象的值，因为 ZIPLIST 只能保存字符串或整数
@@ -130,11 +130,14 @@ robj *listTypePop(robj *subject, int where) {
         int pos = (where == REDIS_HEAD) ? 0 : -1;
 
         p = ziplistIndex(subject->ptr,pos);
+        //获取压缩列表的值，如果是字符串就...反之整型
         if (ziplistGet(p,&vstr,&vlen,&vlong)) {
             // 为被弹出元素创建对象
+            //如果是字符串
             if (vstr) {
                 value = createStringObject((char*)vstr,vlen);
             } else {
+                //如果是整数
                 value = createStringObjectFromLongLong(vlong);
             }
             /* We only need to delete an element when it exists */
@@ -176,7 +179,7 @@ robj *listTypePop(robj *subject, int where) {
  */
 unsigned long listTypeLength(robj *subject) {
 
-    // ZIPLIST
+    // 压缩列表，调用对应的计数函数
     if (subject->encoding == REDIS_ENCODING_ZIPLIST) {
         return ziplistLen(subject->ptr);
 
@@ -210,7 +213,7 @@ listTypeIterator *listTypeInitIterator(robj *subject, long index, unsigned char 
 
     li->direction = direction;
 
-    // ZIPLIST
+    // ZIPLIST压缩列表
     if (li->encoding == REDIS_ENCODING_ZIPLIST) {
         li->zi = ziplistIndex(subject->ptr,index);
 
@@ -457,7 +460,7 @@ void listTypeConvert(robj *subject, int enc) {
 
     // 转换成双端链表
     if (enc == REDIS_ENCODING_LINKEDLIST) {
-
+        //创建一个双端链表
         list *l = listCreate();
 
         listSetFreeMethod(l,decrRefCountVoid);
@@ -465,7 +468,9 @@ void listTypeConvert(robj *subject, int enc) {
         /* listTypeGet returns a robj with incremented refcount */
         // 遍历 ziplist ，并将里面的值全部添加到双端链表中
         li = listTypeInitIterator(subject,0,REDIS_TAIL);
-        while (listTypeNext(li,&entry)) listAddNodeTail(l,listTypeGet(&entry));
+        while (listTypeNext(li,&entry))
+            //返回entry结构的节点值，并从链表的尾部开始插入链表
+            listAddNodeTail(l,listTypeGet(&entry));
         listTypeReleaseIterator(li);
 
         // 更新编码
@@ -490,12 +495,13 @@ void pushGenericCommand(redisClient *c, int where) {
 
     int j, waiting = 0, pushed = 0;
 
-    // 取出列表对象
+    // 取出列表对象-key值
     robj *lobj = lookupKeyWrite(c->db,c->argv[1]);
 
     // 如果列表对象不存在，那么可能有客户端在等待这个键的出现
     int may_have_waiting_clients = (lobj == NULL);
 
+    //类型不是链表返回错误
     if (lobj && lobj->type != REDIS_LIST) {
         addReply(c,shared.wrongtypeerr);
         return;
