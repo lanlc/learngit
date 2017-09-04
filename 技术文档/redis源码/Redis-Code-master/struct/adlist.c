@@ -30,7 +30,6 @@
 
 
 #include <stdlib.h>
-//函数预定义文件
 #include "adlist.h"
 #include "zmalloc.h"
 
@@ -49,7 +48,6 @@ list *listCreate(void)
         return NULL;
     //初始化操作，头尾结点，，3个公共的函数指针全部赋值为NULL
     list->head = list->tail = NULL;
-    //初始化链表查毒
     list->len = 0;
     list->dup = NULL;
     list->free = NULL;
@@ -68,7 +66,6 @@ void listRelease(list *list)
 	
 	//找到当前结点，也就是头结点
     current = list->head;
-    //获取链表的长度
     len = list->len;
     while(len--) {
     	//while循环依次释放结点
@@ -92,12 +89,10 @@ void listRelease(list *list)
  /* 列表添加头结点 */
 list *listAddNodeHead(list *list, void *value)
 {
-    //定义节点
     listNode *node;
 	//定义新的listNode，并赋值函数指针
     if ((node = zmalloc(sizeof(*node))) == NULL)
         return NULL;
-        //赋值节点
     node->value = value;
     if (list->len == 0) {
     	//当此时没有任何结点时，头尾结点是同一个结点，前后指针为NULL
@@ -106,9 +101,7 @@ list *listAddNodeHead(list *list, void *value)
     } else {
     	//设置此结点next与前头结点的位置关系
         node->prev = NULL;
-        //新节点的下一个节点就是当前头结点
         node->next = list->head;
-        //赋值链表的头为新节点
         list->head->prev = node;
         list->head = node;
     }
@@ -128,22 +121,16 @@ list *listAddNodeHead(list *list, void *value)
 list *listAddNodeTail(list *list, void *value)
 {
     listNode *node;
-    //申请节点空间
+
     if ((node = zmalloc(sizeof(*node))) == NULL)
         return NULL;
-        //赋值节点
     node->value = value;
     if (list->len == 0) {
-        //空链表则头尾都新节点
         list->head = list->tail = node;
-        //节点的前后值都为null
         node->prev = node->next = NULL;
     } else {
-        //非空链表，将当前链表的尾部节点赋值到新节点的前一个值
         node->prev = list->tail;
-        //新节点的下一个值为null
         node->next = NULL;
-        //覆盖链表的尾部节点
         list->tail->next = node;
         list->tail = node;
     }
@@ -162,7 +149,6 @@ list *listInsertNode(list *list, listNode *old_node, void *value, int after) {
     if (after) {
     	//如果是在目标结点的后面插入的情况，将新结点的next指针指向老结点的next
         node->prev = old_node;
-        //新节点的下一个值就是旧结点的下一个值
         node->next = old_node->next;
         if (list->tail == old_node) {
         	//如果老结点已经是最后一个结点了，则新的结点直接成为尾部结点
@@ -171,7 +157,6 @@ list *listInsertNode(list *list, listNode *old_node, void *value, int after) {
     } else {
     	//如果是在目标结点的前面插入的情况，将新结点的preview指针指向老结点的preview
         node->next = old_node;
-        //新节点的前一个值就是旧结点的前一个值
         node->prev = old_node->prev;
         if (list->head == old_node) {
         	//如果老结点已经是头结点了，则新的结点直接成为头部结点
@@ -304,9 +289,9 @@ list *listDup(list *orig)
     if ((copy = listCreate()) == NULL)
         return NULL;
     //为新列表赋值好3个函数指针
-    copy->dup = orig->dup;//复制
-    copy->free = orig->free;//释放
-    copy->match = orig->match;//匹配
+    copy->dup = orig->dup;
+    copy->free = orig->free;
+    copy->match = orig->match;
     //获得从头方向开始的迭代器
     iter = listGetIterator(orig, AL_START_HEAD);
     while((node = listNext(iter)) != NULL) {

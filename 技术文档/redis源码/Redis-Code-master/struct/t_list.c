@@ -342,7 +342,7 @@ void listTypeConvert(robj *subject, int enc) {
 void pushGenericCommand(redisClient *c, int where) {
     int j, waiting = 0, pushed = 0;
     robj *lobj = lookupKeyWrite(c->db,c->argv[1]);
-
+    //如果参数类型不属于链表，则退出
     if (lobj && lobj->type != REDIS_LIST) {
         addReply(c,shared.wrongtypeerr);
         return;

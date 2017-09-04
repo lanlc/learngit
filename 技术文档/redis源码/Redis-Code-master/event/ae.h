@@ -101,6 +101,7 @@ typedef struct aeFiredEvent {
 } aeFiredEvent;
 
 /* State of an event based program */
+//基于事件的程序状态
 typedef struct aeEventLoop {
 	//目前创建的最高的文件描述符
     int maxfd;   /* highest file descriptor currently registered */

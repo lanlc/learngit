@@ -1190,6 +1190,7 @@ void beforeSleep(struct aeEventLoop *eventLoop) {
         activeExpireCycle(ACTIVE_EXPIRE_CYCLE_FAST);
 
     /* Try to process pending commands for clients that were just unblocked. */
+    //尝试处理未被阻塞的客户端等待的命令。
     while (listLength(server.unblocked_clients)) {
         ln = listFirst(server.unblocked_clients);
         redisAssert(ln != NULL);
@@ -1198,6 +1199,7 @@ void beforeSleep(struct aeEventLoop *eventLoop) {
         c->flags &= ~REDIS_UNBLOCKED;
 
         /* Process remaining data in the input buffer. */
+        //处理输入缓冲区中的剩余数据。
         if (c->querybuf && sdslen(c->querybuf) > 0) {
             server.current_client = c;
             processInputBuffer(c);
@@ -1380,7 +1382,7 @@ void initServerConfig(void) {
 
     updateLRUClock();
     resetServerSaveParams();
-
+    //追加写照的触发方式
     appendServerSaveParams(60*60,1);  /* save after 1 hour and 1 change */
     appendServerSaveParams(300,100);  /* save after 5 minutes and 100 changes */
     appendServerSaveParams(60,10000); /* save after 1 minute and 10000 changes */
@@ -1422,6 +1424,7 @@ void initServerConfig(void) {
     /* Command table -- we initiialize it here as it is part of the
      * initial configuration, since command names may be changed via
      * redis.conf using the rename-command directive. */
+     //创建命令表的字典，便于根据key进行命令查找
     server.commands = dictCreate(&commandTableDictType,NULL);
     server.orig_commands = dictCreate(&commandTableDictType,NULL);
     populateCommandTable();
@@ -1637,12 +1640,16 @@ void initServer(void) {
 
     createSharedObjects();
     adjustOpenFilesLimit();
+    //创建服务端事件循环
+    //调用 aeCreateEventLoop() 创建事件轮询：
+    //创建了未定义类型的文件事件，所有的状态都在el->apidata属性里
     server.el = aeCreateEventLoop(server.maxclients+REDIS_EVENTLOOP_FDSET_INCR);
     server.db = zmalloc(sizeof(redisDb)*server.dbnum);
 
     /* Open the TCP listening socket for the user commands. */
-    if (server.port != 0 &&
-        listenToPort(server.port,server.ipfd,&server.ipfd_count) == REDIS_ERR)
+    //然后调用anetTcpServer和anetUnixServer 创建对端口和unix域套接字的监听，
+    //并将返回值赋值给 server.ipfd和server.sofd。通知给这两个套接字设置AE_READABLE事件，并设置相应的处理函数
+    if (server.port != 0 && listenToPort(server.port,server.ipfd,&server.ipfd_count) == REDIS_ERR)
         exit(1);
 
     /* Open the listening Unix domain socket. */
@@ -1665,7 +1672,9 @@ void initServer(void) {
 
     /* Create the Redis databases, and initialize other internal state. */
     for (j = 0; j < server.dbnum; j++) {
+        //键空间字典的创建
         server.db[j].dict = dictCreate(&dbDictType,NULL);
+        //键过期字典的创建
         server.db[j].expires = dictCreate(&keyptrDictType,NULL);
         server.db[j].blocking_keys = dictCreate(&keylistDictType,NULL);
         server.db[j].ready_keys = dictCreate(&setDictType,NULL);
@@ -1700,6 +1709,7 @@ void initServer(void) {
 
     /* Create the serverCron() time event, that's our main way to process
      * background operations. */
+     //绑定时间事件处理函数 serverCron
     if(aeCreateTimeEvent(server.el, 1, serverCron, NULL, NULL) == AE_ERR) {
         redisPanic("Can't create the serverCron time event.");
         exit(1);
@@ -1707,21 +1717,25 @@ void initServer(void) {
 
     /* Create an event handler for accepting new connections in TCP and Unix
      * domain sockets. */
+     //创建一个事件处理程序，用于接受TCP域套接字中的新连接。
+     //监听数量循环处理
     for (j = 0; j < server.ipfd_count; j++) {
-        if (aeCreateFileEvent(server.el, server.ipfd[j], AE_READABLE,
-            acceptTcpHandler,NULL) == AE_ERR)
+        //绑定文件事件处理程序，当有事件触发时，就会触发 acceptTcpHandler函数
+        //首先，从eventLoop的event这个aeFileEvent数组里，取出当前fd对应的acFileEvent，
+        //主要是为了在下边给它设置对应事件的处理函数；即根据传入的mask来判断是哪一类事件。
+        if (aeCreateFileEvent(server.el, server.ipfd[j], AE_READABLE, acceptTcpHandler,NULL) == AE_ERR)
             {
                 redisPanic(
                     "Unrecoverable error creating server.ipfd file event.");
             }
     }
+     //创建一个事件处理程序，用于接受UNIX域套接字中的新连接。
     if (server.sofd > 0 && aeCreateFileEvent(server.el,server.sofd,AE_READABLE,
         acceptUnixHandler,NULL) == AE_ERR) redisPanic("Unrecoverable error creating server.sofd file event.");
 
     /* Open the AOF file if needed. */
     if (server.aof_state == REDIS_AOF_ON) {
-        server.aof_fd = open(server.aof_filename,
-                               O_WRONLY|O_APPEND|O_CREAT,0644);
+        server.aof_fd = open(server.aof_filename, O_WRONLY|O_APPEND|O_CREAT,0644);
         if (server.aof_fd == -1) {
             redisLog(REDIS_WARNING, "Can't open the append-only file: %s",
                 strerror(errno));
@@ -1992,6 +2006,7 @@ int processCommand(redisClient *c) {
      * go through checking for replication and QUIT will cause trouble
      * when FORCE_REPLICATION is enabled and would be implemented in
      * a regular command proc. */
+     //第一个命令参数是quit
     if (!strcasecmp(c->argv[0]->ptr,"quit")) {
         addReply(c,shared.ok);
         c->flags |= REDIS_CLOSE_AFTER_REPLY;
@@ -2000,14 +2015,14 @@ int processCommand(redisClient *c) {
 
     /* Now lookup the command and check ASAP about trivial error conditions
      * such as wrong arity, bad command name and so forth. */
+     //根据客户端请求的第一个参数的ptr，在命令列表里进行搜索，比如 set 对应setCommand
     c->cmd = c->lastcmd = lookupCommand(c->argv[0]->ptr);
     if (!c->cmd) {
         flagTransaction(c);
         addReplyErrorFormat(c,"unknown command '%s'",
             (char*)c->argv[0]->ptr);
         return REDIS_OK;
-    } else if ((c->cmd->arity > 0 && c->cmd->arity != c->argc) ||
-               (c->argc < -c->cmd->arity)) {
+    } else if ((c->cmd->arity > 0 && c->cmd->arity != c->argc) || (c->argc < -c->cmd->arity)) {
         flagTransaction(c);
         addReplyErrorFormat(c,"wrong number of arguments for '%s' command",
             c->cmd->name);
@@ -2133,6 +2148,7 @@ int processCommand(redisClient *c) {
         queueMultiCommand(c);
         addReply(c,shared.queued);
     } else {
+        //命令真正执行的地方
         call(c,REDIS_CALL_FULL);
         if (listLength(server.ready_keys))
             handleClientsBlockedOnLists();
@@ -3046,6 +3062,7 @@ void createPidFile(void) {
     /* Try to write the pid file in a best-effort way. */
     FILE *fp = fopen(server.pidfile,"w");
     if (fp) {
+        //获取当前进程号并写入进程文件中
         fprintf(fp,"%d\n",(int)getpid());
         fclose(fp);
     }
@@ -3053,7 +3070,6 @@ void createPidFile(void) {
 
 void daemonize(void) {
     int fd;
-
     if (fork() != 0) exit(0); /* parent exits */
     setsid(); /* create a new session */
 
@@ -3230,7 +3246,9 @@ int main(int argc, char **argv) {
     srand(time(NULL)^getpid());
     //获取当前时间
     gettimeofday(&tv,NULL);
+    //重置哈希种子
     dictSetHashFunctionSeed(tv.tv_sec^tv.tv_usec^getpid());
+    //哨兵模式
     server.sentinel_mode = checkForSentinelMode(argc,argv);
     //初始化服务端的配置
     initServerConfig();
@@ -3301,9 +3319,13 @@ int main(int argc, char **argv) {
         redisLog(REDIS_WARNING, "Warning: no config file specified, using the default config. In order to specify a config file use %s /path/to/%s.conf", argv[0], server.sentinel_mode ? "sentinel" : "redis");
     }
     //是否开启守护进程
-    if (server.daemonize) daemonize();
+    if (server.daemonize)
+        daemonize();
+    //初始化服务器 调用 createSharedObjects() 初始化 全局的shared对象
+    //调用 aeCreateEventLoop() 创建事件轮询：
     initServer();
-    if (server.daemonize) createPidFile();
+    if (server.daemonize)
+        createPidFile();
     redisSetProcTitle(argv[0]);
     redisAsciiArt();
 
@@ -3328,9 +3350,13 @@ int main(int argc, char **argv) {
     }
 	
 	//事件加载之前调用的beforeSleep方法
+	//然后就设置每次进入事件处理函数之前需要执行的函数
+	//比如处理缓冲区中未处理的数据、AOF写照到磁盘等
     aeSetBeforeSleepProc(server.el,beforeSleep);
     //开启事件驱动循环
+    //一个循环事件里有多个连接监听，可能是accept、read、write、close
     aeMain(server.el);
+    //如果事件轮询结束(acMain返回)，则调用aeDeleteEventLoop(server.el);删除eventLoop
     aeDeleteEventLoop(server.el);
     return 0;
 }

@@ -234,7 +234,7 @@ static int anetSetReuseAddr(char *err, int fd) {
     return ANET_OK;
 }
 
-/* anet创建socket连接 */
+/* anet创建socket连接 套接字*/
 static int anetCreateSocket(char *err, int domain) {
     int s;
     //在给定的域下创建连接
@@ -440,6 +440,7 @@ static int _anetTcpServer(char *err, int port, char *bindaddr, int af, int backl
         return ANET_ERR;
     }
     for (p = servinfo; p != NULL; p = p->ai_next) {
+        //创建一个套接字并复值给s
         if ((s = socket(p->ai_family,p->ai_socktype,p->ai_protocol)) == -1)
             continue;
 
@@ -476,7 +477,7 @@ int anetUnixServer(char *err, char *path, mode_t perm, int backlog)
 {
     int s;
     struct sockaddr_un sa;
-
+    //创建socket连接
     if ((s = anetCreateSocket(err,AF_LOCAL)) == ANET_ERR)
         return ANET_ERR;
 
@@ -495,6 +496,9 @@ static int anetGenericAccept(char *err, int s, struct sockaddr *sa, socklen_t *l
     int fd;
     while(1) {
     	//通过while循环等待连接
+    	//套接字描述符，该套接口在listen()后监听连接。
+    	//（可选）指针，指向一缓冲区，其中接收为通讯层所知的连接实体的地址。sa参数的实际格式由套接口创建时所产生的地址族确定。
+    	//（可选）指针，输入参数，配合sa一起使用，指向存有sa地址长度的整型数。
         fd = accept(s,sa,len);
         if (fd == -1) {
             if (errno == EINTR)
@@ -513,6 +517,7 @@ int anetTcpAccept(char *err, int s, char *ip, size_t ip_len, int *port) {
     int fd;
     struct sockaddr_storage sa;
     socklen_t salen = sizeof(sa);
+    //调用accept()返回一个描述所接受包的SOCKET类型的值
     if ((fd = anetGenericAccept(err,s,(struct sockaddr*)&sa,&salen)) == -1)
         return ANET_ERR;
 

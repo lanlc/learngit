@@ -168,6 +168,7 @@ void dbAdd(redisDb *db, robj *key, robj *val) {
  * The program is aborted if the key was not already present. */
 /* db  key value覆盖操作，如果不存在此key,操作失效 */
 void dbOverwrite(redisDb *db, robj *key, robj *val) {
+    //搜索对应key文字的字典
     struct dictEntry *de = dictFind(db->dict,key->ptr);
 
     redisAssertWithInfo(NULL,key,de != NULL);
@@ -182,6 +183,7 @@ void dbOverwrite(redisDb *db, robj *key, robj *val) {
  * 3) The expire time of the key is reset (the key is made persistent). */
 /* 高级设置操作，如果不存在的直接添加，存在的就覆盖 */
 void setKey(redisDb *db, robj *key, robj *val) {
+    //搜索键空间是否存在
     if (lookupKeyWrite(db,key) == NULL) {
         dbAdd(db,key,val);
     } else {

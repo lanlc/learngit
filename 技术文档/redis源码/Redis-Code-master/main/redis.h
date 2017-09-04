@@ -507,8 +507,8 @@ typedef struct redisObject {
 } while(0);
 
 typedef struct redisDb {
-    dict *dict;                 /* The keyspace for this DB */
-    dict *expires;              /* Timeout of keys with a timeout set */
+    dict *dict;                 /* The keyspace for this DB *///间空间字典
+    dict *expires;              /* Timeout of keys with a timeout set *///过期字典
     dict *blocking_keys;        /* Keys with clients waiting for data (BLPOP) */
     dict *ready_keys;           /* Blocked keys that received a PUSH */
     dict *watched_keys;         /* WATCHED keys for MULTI/EXEC CAS */
@@ -689,7 +689,7 @@ struct redisServer {
     /* General */
     char *configfile;           /* Absolute config file path, or NULL */
     int hz;                     /* serverCron() calls frequency in hertz */
-    redisDb *db;
+    redisDb *db;                //数据库数组，初始化是，根据dbnum来创建对应数量的数据库，默认16个
     dict *commands;             /* Command table */
     dict *orig_commands;        /* Command table before command renaming. */
     aeEventLoop *el;

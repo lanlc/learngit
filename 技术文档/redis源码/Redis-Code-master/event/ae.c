@@ -62,28 +62,38 @@
 #endif
 
 /* 创建aeEventLoop，内部的fileEvent和Fired事件的个数为setSize个 */
+//初始化函数，创建事件循环，函数内部alloc一个结构，用于表示事件状态，供后续其他函数作为参数使用
+//initServer函数调用生成
 aeEventLoop *aeCreateEventLoop(int setsize) {
     aeEventLoop *eventLoop;
     int i;
-
+    //申请事件轮询空间
     if ((eventLoop = zmalloc(sizeof(*eventLoop))) == NULL) goto err;
     //创建eventLoop内部的setSize个数
     eventLoop->events = zmalloc(sizeof(aeFileEvent)*setsize);
-    eventLoop->fired = zmalloc(sizeof(aeFiredEvent)*setsize);
+    eventLoop->fired  = zmalloc(sizeof(aeFiredEvent)*setsize);
     if (eventLoop->events == NULL || eventLoop->fired == NULL) goto err;
     eventLoop->setsize = setsize;
     eventLoop->lastTime = time(NULL);
+    //时间event用链表存储
     eventLoop->timeEventHead = NULL;
     eventLoop->timeEventNextId = 0;
-    eventLoop->stop = 0;
+
+    eventLoop->stop = 0;//表示是否停止事件循环
+     //maxfd只由ae_select.c使用，后续有些相关的处理，如果使用epoll的话，其实可以进行简化
     eventLoop->maxfd = -1;
+    //每次调用epoll\select前调用的函数，由框架使用者注册
     eventLoop->beforesleep = NULL;
+    //生成epoll专用文件描述符
+    //调用aeApiCreate(aeEventLoop) 对eventLoop进行初始化,在这个函数里边，
+    //首先调用zmalloc为aeApiState 分配内存， 然后调用epoll_create创建一个fd,
+    //并将其赋值给 aeApiState的epfd， 然后整个aeApiState 赋值给eventLoop的apidata.
     if (aeApiCreate(eventLoop) == -1) goto err;
     /* Events with mask == AE_NONE are not set. So let's initialize the
      * vector with it. */
     for (i = 0; i < setsize; i++)
     	//开始的时候文件事件没有类型，所以为NULL
-        eventLoop->events[i].mask = AE_NONE;
+        eventLoop->events[i].mask = AE_NONE; //将所有的文件描述符的mask设置为无效值，作为初始化
     return eventLoop;
 
 err:
@@ -129,6 +139,7 @@ int aeResizeSetSize(aeEventLoop *eventLoop, int setsize) {
 }
 
 /* 删除EventLoop，释放相应的事件所占的空间 */
+  //底层实现执行释放操作后，释放state的内存
 void aeDeleteEventLoop(aeEventLoop *eventLoop) {
     aeApiFree(eventLoop);
     zfree(eventLoop->events);
@@ -137,11 +148,15 @@ void aeDeleteEventLoop(aeEventLoop *eventLoop) {
 }
 
 /* 设置eventLoop中的停止属性为1 */
+//停止事件循环,redis作为一个无限循环的server，在redis.c中并没有任何一处调用此函数
 void aeStop(aeEventLoop *eventLoop) {
     eventLoop->stop = 1;
 }
 
-/* 在eventLoop中创建文件事件 */
+/* 在eventLoop循环事件中创建文件事件 */
+ //创建文件fd事件，加入事件循环监控列表，使得后续epoll\select时将会测试这个文件描述符的可读性（可写性）
+ //绑定事件的处理函数
+ //*proc就是绑定的函数名，当事件被触发时，就会调用该函数
 int aeCreateFileEvent(aeEventLoop *eventLoop, int fd, int mask,
         aeFileProc *proc, void *clientData)
 {
@@ -149,16 +164,22 @@ int aeCreateFileEvent(aeEventLoop *eventLoop, int fd, int mask,
         errno = ERANGE;
         return AE_ERR;
     }
+    //获取事件的描述符
     aeFileEvent *fe = &eventLoop->events[fd];
 	
 	//添加FileEvent操作
+	// 然后调用 acApiEvent这个事件注册函数:
     if (aeApiAddEvent(eventLoop, fd, mask) == -1)
         return AE_ERR;
     fe->mask |= mask;
+    //注册处理函数
+    //redis的读写都是调用同一个处理函数
     if (mask & AE_READABLE) fe->rfileProc = proc;
     if (mask & AE_WRITABLE) fe->wfileProc = proc;
+    //赋值客户端数据
     fe->clientData = clientData;
     if (fd > eventLoop->maxfd)
+        //更新maxfd
         eventLoop->maxfd = fd;
     return AE_OK;
 }
@@ -185,6 +206,7 @@ void aeDeleteFileEvent(aeEventLoop *eventLoop, int fd, int mask)
 }
 
 //根据文件描述符id，找出文件的属性，是读事件还是写事件
+  //返回值为该文件描述符关注的事件类型（可读、可写）
 int aeGetFileEvents(aeEventLoop *eventLoop, int fd) {
     if (fd >= eventLoop->setsize) return 0;
     aeFileEvent *fe = &eventLoop->events[fd];
@@ -377,25 +399,27 @@ static int processTimeEvents(aeEventLoop *eventLoop) {
  * the events that's possible to process without to wait are processed.
  *
  * The function returns the number of events processed. */
-/* 处理eventLoop中的所有类型事件 */
+/* 处理eventLoop中监听的所有类型事件 */
 int aeProcessEvents(aeEventLoop *eventLoop, int flags)
 {
     int processed = 0, numevents;
 
     /* Nothing to do? return ASAP */
+    //没有时间事件和文件事件，直接退出
     if (!(flags & AE_TIME_EVENTS) && !(flags & AE_FILE_EVENTS)) return 0;
 
     /* Note that we want call select() even if there are no
      * file events to process as long as we want to process time
      * events, in order to sleep until the next time event is ready
      * to fire. */
-    if (eventLoop->maxfd != -1 ||
-        ((flags & AE_TIME_EVENTS) && !(flags & AE_DONT_WAIT))) {
+     //请注意，我们希望调用select()，即使没有文件事件，只要我们想处理时间事件，就可以休眠，直到下一次事件准备就绪为止。
+    if (eventLoop->maxfd != -1 || ((flags & AE_TIME_EVENTS) && !(flags & AE_DONT_WAIT))) {
         int j;
         aeTimeEvent *shortest = NULL;
         struct timeval tv, *tvp;
 
         if (flags & AE_TIME_EVENTS && !(flags & AE_DONT_WAIT))
+            //遍历定时器链表，搜索最近一个要超时的定时器
             shortest = aeSearchNearestTimer(eventLoop);
         if (shortest) {
             long now_sec, now_ms;
@@ -404,6 +428,7 @@ int aeProcessEvents(aeEventLoop *eventLoop, int flags)
              * timer to fire. */
             aeGetTime(&now_sec, &now_ms);
             tvp = &tv;
+            //计算差值
             tvp->tv_sec = shortest->when_sec - now_sec;
             if (shortest->when_ms < now_ms) {
                 tvp->tv_usec = ((shortest->when_ms+1000) - now_ms)*1000;
@@ -411,6 +436,7 @@ int aeProcessEvents(aeEventLoop *eventLoop, int flags)
             } else {
                 tvp->tv_usec = (shortest->when_ms - now_ms)*1000;
             }
+            //小于0则值为零
             if (tvp->tv_sec < 0) tvp->tv_sec = 0;
             if (tvp->tv_usec < 0) tvp->tv_usec = 0;
         } else {
@@ -425,9 +451,13 @@ int aeProcessEvents(aeEventLoop *eventLoop, int flags)
                 tvp = NULL; /* wait forever */
             }
         }
-
+        //获取的tvp其实就是文件时间处理超时的时间限制
+        //添加文件事件
+        //IO多路复用调用地方
         numevents = aeApiPoll(eventLoop, tvp);
+        //循环取出eventLoop.fired中的fd文件描述符和对应事件的 *fe，判断事件类型，调取相应的处理函数
         for (j = 0; j < numevents; j++) {
+            //循环处理文件事件
             aeFileEvent *fe = &eventLoop->events[eventLoop->fired[j].fd];
             int mask = eventLoop->fired[j].mask;
             int fd = eventLoop->fired[j].fd;
@@ -438,7 +468,7 @@ int aeProcessEvents(aeEventLoop *eventLoop, int flags)
              * processed, so we check if the event is still valid. */
             if (fe->mask & mask & AE_READABLE) {
                 rfired = 1;
-                //根据掩码计算判断是否为ae读事件，调用时间中的读的处理方法
+                //调用绑定的事件 acceptTcpHandle
                 fe->rfileProc(eventLoop,fd,fe->clientData,mask);
             }
             if (fe->mask & mask & AE_WRITABLE) {
@@ -449,6 +479,7 @@ int aeProcessEvents(aeEventLoop *eventLoop, int flags)
         }
     }
     /* Check time events */
+    //处理事件事件
     if (flags & AE_TIME_EVENTS)
         processed += processTimeEvents(eventLoop);
 

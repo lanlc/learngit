@@ -109,6 +109,7 @@ void setGenericCommand(redisClient *c, int flags, robj *key, robj *val, robj *ex
         addReply(c, abort_reply ? abort_reply : shared.nullbulk);
         return;
     }
+    //db序号、键键空间的键、键空间的值
     setKey(c->db,key,val);
     server.dirty++;
     if (expire) setExpire(c->db,key,mstime()+milliseconds);
@@ -129,7 +130,7 @@ void setCommand(redisClient *c) {
         char *a = c->argv[j]->ptr;
         robj *next = (j == c->argc-1) ? NULL : c->argv[j+1];
 		
-		/* 通过参数，判断是哪种SET命令操作 */
+		/* 通过首字母，判断是哪种SET命令操作 */
         if ((a[0] == 'n' || a[0] == 'N') &&
             (a[1] == 'x' || a[1] == 'X') && a[2] == '\0') {
             flags |= REDIS_SET_NX;

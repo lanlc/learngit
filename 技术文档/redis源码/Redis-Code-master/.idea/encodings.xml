@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/READ_ME.txt" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/baseinfo/asciilogo.h" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/data/aof.c" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/data/config.c" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/data/db.c" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/event/ae.c" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/event/ae.h" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/event/ae_epoll.c" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/main/redis-cli.c" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/main/redis.c" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/main/redis.h" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/net/anet.c" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/net/networking.c" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/struct/dict.c" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/struct/dict.h" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/struct/sds.c" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/struct/t_list.c" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/struct/t_string.c" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/wrapper/object.c" charset="GBK" />
+    <file url="PROJECT" charset="UTF-8" />
+  </component>
+</project>

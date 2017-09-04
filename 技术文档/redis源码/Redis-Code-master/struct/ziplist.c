@@ -634,7 +634,6 @@ static unsigned char *__ziplistInsert(unsigned char *zl, unsigned char *p, unsig
     }
 
     /* See if the entry can be encoded */
-    //是否能编码
     if (zipTryEncoding(s,slen,&value,&encoding)) {
         /* 'encoding' is set to the appropriate integer encoding */
         reqlen = zipIntSize(encoding);
@@ -645,14 +644,12 @@ static unsigned char *__ziplistInsert(unsigned char *zl, unsigned char *p, unsig
     }
     /* We need space for both the length of the previous entry and
      * the length of the payload. */
-     //我们需要空间既包括上一项的长度，也需要有效载荷的长度。
     reqlen += zipPrevEncodeLength(NULL,prevlen);
     reqlen += zipEncodeLength(NULL,encoding,slen);
 
     /* When the insert position is not equal to the tail, we need to
      * make sure that the next entry can hold this entry's length in
      * its prevlen field. */
-     //确保插入的长度在下一个条目的前条目长度prevlen是允许的
     nextdiff = (p[0] != ZIP_END) ? zipPrevLenByteDiff(p,reqlen) : 0;
 
     /* Store offset because a realloc may change the address of zl. */
@@ -662,7 +659,6 @@ static unsigned char *__ziplistInsert(unsigned char *zl, unsigned char *p, unsig
     p = zl+offset;
 
     /* Apply memory move when necessary and update tail offset. */
-    //更新内存移动
     if (p[0] != ZIP_END) {
         /* Subtract one because of the ZIP_END bytes */
         //如果插入的位置不是尾结点，则挪动位置
