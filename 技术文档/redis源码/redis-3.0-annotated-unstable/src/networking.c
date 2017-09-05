@@ -93,9 +93,8 @@ redisClient *createClient(int fd) {
         // 设置 keep alive
         if (server.tcpkeepalive)
             anetKeepAlive(NULL,fd,server.tcpkeepalive);
-        // 绑定读事件到事件 loop （开始接收命令请求）
-        if (aeCreateFileEvent(server.el,fd,AE_READABLE,
-            readQueryFromClient, c) == AE_ERR)
+        // 注册读事件到epoll的对应临时套接字fd上 （开始接收命令请求），c是客户端数据
+        if (aeCreateFileEvent(server.el,fd,AE_READABLE, readQueryFromClient, c) == AE_ERR)
         {
             close(fd);
             zfree(c);
@@ -107,13 +106,13 @@ redisClient *createClient(int fd) {
 
     // 默认数据库
     selectDb(c,0);
-    // 套接字
+    // 临时套接字
     c->fd = fd;
     // 名字
     c->name = NULL;
     // 回复缓冲区的偏移量
     c->bufpos = 0;
-    // 查询缓冲区
+    // 清空查询缓冲区
     c->querybuf = sdsempty();
     // 查询缓冲区峰值
     c->querybuf_peak = 0;
@@ -749,13 +748,14 @@ void copyClientOutputBuffer(redisClient *dst, redisClient *src) {
  * TCP 连接 accept 处理器
  */
 #define MAX_ACCEPTS_PER_CALL 1000
+//处理每一个TCP请求
 static void acceptCommonHandler(int fd, int flags) {
 
     // 创建客户端
     redisClient *c;
+    //为该请求创建客户端实例，里面注册了处理客户端发起命令的函数
     if ((c = createClient(fd)) == NULL) {
-        redisLog(REDIS_WARNING,
-            "Error registering fd event for the new client: %s (fd=%d)",
+        redisLog(REDIS_WARNING, "Error registering fd event for the new client: %s (fd=%d)",
             strerror(errno),fd);
         close(fd); /* May be already closed, just ignore errors */
         return;
@@ -791,15 +791,17 @@ static void acceptCommonHandler(int fd, int flags) {
 /* 
  * 创建一个 TCP 连接处理器
  */
+ //epoll的描述符、临时套接字、客户端数据、模式
 void acceptTcpHandler(aeEventLoop *el, int fd, void *privdata, int mask) {
     int cport, cfd, max = MAX_ACCEPTS_PER_CALL;
     char cip[REDIS_IP_STR_LEN];
     REDIS_NOTUSED(el);
     REDIS_NOTUSED(mask);
     REDIS_NOTUSED(privdata);
-
+    //每次最多处理1000个请求
     while(max--) {
         // accept 客户端连接
+        //为每一个请求接受连接处理
         cfd = anetTcpAccept(server.neterr, fd, cip, sizeof(cip), &cport);
         if (cfd == ANET_ERR) {
             if (errno != EWOULDBLOCK)
@@ -1490,6 +1492,7 @@ void processInputBuffer(redisClient *c) {
     // 这些滞留内容也许不能完整构成一个符合协议的命令，
     // 需要等待下次读事件的就绪
     while(sdslen(c->querybuf)) {
+        //flags说明，请看redis.h的 Client flags
 
         /* Return if clients are paused. */
         // 如果客户端正处于暂停状态，那么直接返回
@@ -1555,7 +1558,7 @@ void readQueryFromClient(aeEventLoop *el, int fd, void *privdata, int mask) {
     // 设置服务器的当前客户端
     server.current_client = c;
     
-    // 读入长度（默认为 16 MB）
+    // 读入缓冲区长度（默认为 16 MB）
     readlen = REDIS_IOBUF_LEN;
 
     /* If this is a multi bulk request, and we are processing a bulk reply
@@ -1580,7 +1583,7 @@ void readQueryFromClient(aeEventLoop *el, int fd, void *privdata, int mask) {
     if (c->querybuf_peak < qblen) c->querybuf_peak = qblen;
     // 为查询缓冲区分配空间
     c->querybuf = sdsMakeRoomFor(c->querybuf, readlen);
-    // 读入内容到查询缓存
+    // 调用socket的read函数读入内容到查询缓存
     nread = read(fd, c->querybuf+qblen, readlen);
 
     // 读入出错
@@ -1629,7 +1632,7 @@ void readQueryFromClient(aeEventLoop *el, int fd, void *privdata, int mask) {
     // 从查询缓存重读取内容，创建参数，并执行命令
     // 函数会执行到缓存中的所有内容都被处理完为止
     processInputBuffer(c);
-
+    //释放当前客户端连接
     server.current_client = NULL;
 }
 

@@ -278,9 +278,11 @@ int aeDeleteTimeEvent(aeEventLoop *eventLoop, long long id)
 /* 搜索出最近的Timer时间事件 */
 static aeTimeEvent *aeSearchNearestTimer(aeEventLoop *eventLoop)
 {
+    //获取时间事件链表
     aeTimeEvent *te = eventLoop->timeEventHead;
+    //初始化变量
     aeTimeEvent *nearest = NULL;
-
+    //遍历出最近要执行的时间事件函数的时间
     while(te) {
         if (!nearest || te->when_sec < nearest->when_sec ||
                 (te->when_sec == nearest->when_sec &&

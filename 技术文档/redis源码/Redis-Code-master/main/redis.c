@@ -1640,9 +1640,11 @@ void initServer(void) {
 
     createSharedObjects();
     adjustOpenFilesLimit();
-    //创建服务端事件循环
+    //创建服务端事件循环，此时未注册任何事件
     //调用 aeCreateEventLoop() 创建事件轮询：
     //创建了未定义类型的文件事件，所有的状态都在el->apidata属性里
+    //参数是客户端最大连接数
+    //一个el监听10000多个链接的状态，只要有触发就会唤醒进程进行处理
     server.el = aeCreateEventLoop(server.maxclients+REDIS_EVENTLOOP_FDSET_INCR);
     server.db = zmalloc(sizeof(redisDb)*server.dbnum);
 
@@ -1720,7 +1722,7 @@ void initServer(void) {
      //创建一个事件处理程序，用于接受TCP域套接字中的新连接。
      //监听数量循环处理
     for (j = 0; j < server.ipfd_count; j++) {
-        //绑定文件事件处理程序，当有事件触发时，就会触发 acceptTcpHandler函数
+        //绑定文件事件处理程序，每当有事件触发时，就会触发 acceptTcpHandler函数
         //首先，从eventLoop的event这个aeFileEvent数组里，取出当前fd对应的acFileEvent，
         //主要是为了在下边给它设置对应事件的处理函数；即根据传入的mask来判断是哪一类事件。
         if (aeCreateFileEvent(server.el, server.ipfd[j], AE_READABLE, acceptTcpHandler,NULL) == AE_ERR)

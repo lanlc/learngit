@@ -44,7 +44,7 @@ static void aeApiDelEvent(aeEventLoop *eventLoop, int fd, int delmask)
 static int aeApiPoll(aeEventLoop *eventLoop, struct timeval *tvp)
 static char *aeApiName(void)
 
-
+//调用IO多路复用
 static int aeApiCreate(aeEventLoop *eventLoop) {
     aeApiState *state = zmalloc(sizeof(aeApiState));
 
@@ -58,6 +58,7 @@ static int aeApiCreate(aeEventLoop *eventLoop) {
     //size 就是你在这个 epoll fd 上能关注的最大 socket fd 数，大小自定，只要内存足够。
     //1024是内核保证能够正确处理的最大句柄数，多于这个最大数时内核可不保证效果。
     //Linux内核会创建一个eventpoll结构体
+    //占用一个fd值
     state->epfd = epoll_create(1024); /* 1024 is just a hint for the kernel */
     if (state->epfd == -1) {
         zfree(state->events);
@@ -144,6 +145,7 @@ static int aeApiPoll(aeEventLoop *eventLoop, struct timeval *tvp) {
     //maxevents: 返回的最大事件数；maxevents告知内核这个events有多大，这个 maxevents的值不能大于创建epoll_create()时的size 1024
     //timeout: 等待 I/O 事件发生的超时值（毫秒）；
     //在调用时，在给定的timeout时间内，当在监控的所有句柄中有事件发生时，就返回用户态的进程。
+    //epoll将会把发生的事件赋值到events数组中
     retval = epoll_wait(state->epfd,state->events,eventLoop->setsize, tvp ? (tvp->tv_sec*1000 + tvp->tv_usec/1000) : -1);
     if (retval > 0) {
         int j;

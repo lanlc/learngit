@@ -223,7 +223,7 @@ int hashTypeExists(robj *o, robj *field) {
 /* hashType设置操作，分2种情况，ziplist,和字典hashtable */
 int hashTypeSet(robj *o, robj *field, robj *value) {
     int update = 0;
-
+    //链表结构
     if (o->encoding == REDIS_ENCODING_ZIPLIST) {
         unsigned char *zl, *fptr, *vptr;
         
@@ -232,12 +232,15 @@ int hashTypeSet(robj *o, robj *field, robj *value) {
         value = getDecodedObject(value);
 
         zl = o->ptr;
+        //遍历链表，返回节点指针或者null
         fptr = ziplistIndex(zl, ZIPLIST_HEAD);
         if (fptr != NULL) {
             fptr = ziplistFind(fptr, field->ptr, sdslen(field->ptr), 1);
             if (fptr != NULL) {
                 /* Grab pointer to the value (fptr points to the field) */
+                //返回后置节点
                 vptr = ziplistNext(zl, fptr);
+                //自定义assert函数，当条件不通过时打印文件名、行号以及条件信息。
                 redisAssert(vptr != NULL);
                 update = 1;
 
@@ -249,7 +252,7 @@ int hashTypeSet(robj *o, robj *field, robj *value) {
                 zl = ziplistInsert(zl, vptr, value->ptr, sdslen(value->ptr));
             }
         }
-
+        //不存在旧节点则往链表中压入key和value
         if (!update) {
             /* Push new field/value pair onto the tail of the ziplist */
             zl = ziplistPush(zl, field->ptr, sdslen(field->ptr), ZIPLIST_TAIL);
@@ -545,7 +548,8 @@ void hashTypeConvert(robj *o, int enc) {
 void hsetCommand(redisClient *c) {
     int update;
     robj *o;
-
+    //搜索是否已经存在key，不存在则创建一个哈希结构并新增到对应db的键空间中、
+    //存在则检查c的类型是否是哈希
     if ((o = hashTypeLookupWriteOrCreate(c,c->argv[1])) == NULL) return;
     hashTypeTryConversion(o,c->argv,2,3);
     hashTypeTryObjectEncoding(o,&c->argv[2], &c->argv[3]);

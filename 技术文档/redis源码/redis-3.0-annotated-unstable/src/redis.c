@@ -2440,7 +2440,8 @@ void call(redisClient *c, int flags) {
     dirty = server.dirty;
     // 计算命令开始执行的时间
     start = ustime();
-    // 执行实现函数
+    // 调用执行实现函数
+    //在上一层就应该查找到对应的命令了
     c->cmd->proc(c);
     // 计算命令执行耗费的时间
     duration = ustime()-start;
@@ -2604,6 +2605,7 @@ int processCommand(redisClient *c) {
         // 集群运作正常
         } else {
             int error_code;
+            //获取集群节点
             clusterNode *n = getNodeByQuery(c,c->cmd,c->argv,c->argc,&hashslot,&error_code);
             // 不能执行多键处理命令
             if (n == NULL) {
