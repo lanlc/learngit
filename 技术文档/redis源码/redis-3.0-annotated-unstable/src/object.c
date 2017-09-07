@@ -556,8 +556,7 @@ robj *tryObjectEncoding(robj *o) {
          * Note that we avoid using shared integers when maxmemory is used
          * because every object needs to have a private LRU field for the LRU
          * algorithm to work well. */
-        if (server.maxmemory == 0 &&
-            value >= 0 &&
+        if (server.maxmemory == 0 && value >= 0 &&
             value < REDIS_SHARED_INTEGERS)
         {
             decrRefCount(o);
