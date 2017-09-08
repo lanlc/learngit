@@ -870,7 +870,7 @@ unsigned char *ziplistFind(unsigned char *p, unsigned char *vstr, unsigned int v
     while (p[0] != ZIP_END) {
         unsigned int prevlensize, encoding, lensize, len;
         unsigned char *q;
-
+        //获取编码存储所需字节数 1 || 5
         ZIP_DECODE_PREVLENSIZE(p, prevlensize);
         ZIP_DECODE_LENGTH(p + prevlensize, encoding, lensize, len);
         q = p + prevlensize + lensize;

@@ -423,6 +423,7 @@ int dictReplace(dict *d, void *key, void *val)
      * you want to increment (set), and then decrement (free), and not the
      * reverse. */
     //赋值方法
+    //设置新值并释放旧值。注意，在这个顺序中做这个很重要，因为值可能和前面的值完全一样。在此上下文中，请考虑引用计数，您希望增加(set)，然后减少(空闲)，而不是相反。
     auxentry = *entry;
     dictSetVal(d, entry, val);
     dictFreeVal(d, &auxentry);

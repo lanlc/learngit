@@ -11,15 +11,20 @@
     <file url="file://$PROJECT_DIR$/技术文档/redis源码/Redis-Code-master/main/redis.c" charset="GBK" />
     <file url="file://$PROJECT_DIR$/技术文档/redis源码/Redis-Code-master/struct/adlist.c" charset="GBK" />
     <file url="file://$PROJECT_DIR$/技术文档/redis源码/Redis-Code-master/struct/adlist.h" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/技术文档/redis源码/Redis-Code-master/struct/dict.c" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/技术文档/redis源码/Redis-Code-master/struct/dict.h" charset="GBK" />
     <file url="file://$PROJECT_DIR$/技术文档/redis源码/Redis-Code-master/struct/sds.c" charset="GBK" />
     <file url="file://$PROJECT_DIR$/技术文档/redis源码/Redis-Code-master/struct/sds.h" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/技术文档/redis源码/Redis-Code-master/struct/t_hash.c" charset="GBK" />
     <file url="file://$PROJECT_DIR$/技术文档/redis源码/Redis-Code-master/struct/t_list.c" charset="GBK" />
     <file url="file://$PROJECT_DIR$/技术文档/redis源码/Redis-Code-master/struct/t_string.c" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/技术文档/redis源码/Redis-Code-master/struct/ziplist.c" charset="GBK" />
     <file url="file://$PROJECT_DIR$/技术文档/redis源码/Redis-Code-master/tool/bitops.c" charset="GBK" />
     <file url="file://$PROJECT_DIR$/技术文档/redis源码/Redis-Code-master/tool/crc64.c" charset="GBK" />
     <file url="file://$PROJECT_DIR$/技术文档/redis源码/Redis-Code-master/tool/help.h" charset="GBK" />
     <file url="file://$PROJECT_DIR$/技术文档/redis源码/Redis-Code-master/tool/rand.c" charset="GBK" />
     <file url="file://$PROJECT_DIR$/技术文档/redis源码/Redis-Code-master/wrapper/notify.c" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/技术文档/redis源码/Redis-Code-master/wrapper/object.c" charset="GBK" />
     <file url="file://$PROJECT_DIR$/架构/项目代码结构杂谈.md" charset="GBK" />
     <file url="PROJECT" charset="UTF-8" />
   </component>

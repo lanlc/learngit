@@ -118,6 +118,7 @@ int hashTypeGetFromZiplist(robj *o, robj *field,
     field = getDecodedObject(field);
 
     zl = o->ptr;
+    //获取偏移量指针
     fptr = ziplistIndex(zl, ZIPLIST_HEAD);
     if (fptr != NULL) {
     	//找到索引位置
@@ -234,9 +235,11 @@ int hashTypeSet(robj *o, robj *field, robj *value) {
         zl = o->ptr;
         fptr = ziplistIndex(zl, ZIPLIST_HEAD);
         if (fptr != NULL) {
+            //找到指向该条目的指针，等于指定的条目
             fptr = ziplistFind(fptr, field->ptr, sdslen(field->ptr), 1);
             if (fptr != NULL) {
                 /* Grab pointer to the value (fptr points to the field) */
+                //获取指向值的指针(fptr指向字段)
                 vptr = ziplistNext(zl, fptr);
                 redisAssert(vptr != NULL);
                 update = 1;
