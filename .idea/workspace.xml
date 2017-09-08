@@ -21,14 +21,34 @@
     <favorites_list name="learngit" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.57100415">
+    <splitter split-orientation="horizontal" split-proportion="0.4117647">
       <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="t_hash.c" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/技术文档/redis源码/Redis-Code-master/struct/t_hash.c">
+        <leaf>
+          <file leaf-file-name="sds.c" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/技术文档/redis源码/Redis-Code-master/struct/sds.c">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.7429538">
-                  <caret line="630" column="34" selection-start-line="630" selection-start-column="34" selection-end-line="630" selection-end-column="34" />
+                <state vertical-scroll-proportion="-9.833333">
+                  <caret line="64" column="14" selection-start-line="64" selection-start-column="8" selection-end-line="64" selection-end-column="14" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="sds.h" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/技术文档/redis源码/Redis-Code-master/struct/sds.h">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.13333334">
+                  <caret line="62" column="20" selection-start-line="62" selection-start-column="20" selection-end-line="62" selection-end-column="20" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="db.c" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/技术文档/redis源码/Redis-Code-master/data/db.c">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="-13.3">
+                  <caret line="102" column="30" selection-start-line="102" selection-start-column="20" selection-end-line="102" selection-end-column="30" />
                   <folding />
                 </state>
               </provider>
@@ -38,37 +58,27 @@
             <entry file="file://$PROJECT_DIR$/技术文档/redis源码/Redis-Code-master/struct/dict.c">
               <provider selected="true" editor-type-id="text-editor">
                 <state vertical-scroll-proportion="-9.833333">
-                  <caret line="828" column="16" selection-start-line="828" selection-start-column="8" selection-end-line="828" selection-end-column="16" />
+                  <caret line="564" column="26" selection-start-line="564" selection-start-column="16" selection-end-line="564" selection-end-column="26" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="dict.h" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/技术文档/redis源码/Redis-Code-master/struct/dict.h">
+          <file leaf-file-name="t_string.c" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/技术文档/redis源码/Redis-Code-master/struct/t_string.c">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-9.833333">
-                  <caret line="186" column="16" selection-start-line="186" selection-start-column="8" selection-end-line="186" selection-end-column="16" />
+                <state vertical-scroll-proportion="-5.5">
+                  <caret line="276" column="33" selection-start-line="276" selection-start-column="13" selection-end-line="276" selection-end-column="33" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="ziplist.c" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/技术文档/redis源码/Redis-Code-master/struct/ziplist.c">
+          <file leaf-file-name="networking.c" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/技术文档/redis源码/Redis-Code-master/net/networking.c">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-9.833333">
-                  <caret line="339" column="37" selection-start-line="339" selection-start-column="20" selection-end-line="339" selection-end-column="37" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="object.c" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/技术文档/redis源码/Redis-Code-master/wrapper/object.c">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-20.233334">
-                  <caret line="417" column="32" selection-start-line="417" selection-start-column="14" selection-end-line="417" selection-end-column="32" />
+                <state vertical-scroll-proportion="-0.019165726">
+                  <caret line="331" column="26" selection-start-line="331" selection-start-column="5" selection-end-line="331" selection-end-column="26" />
                   <folding />
                 </state>
               </provider>
@@ -78,12 +88,12 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="哈希笔记.md" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/技术文档/redis源码/源码阅读记录/哈希笔记.md">
+          <file leaf-file-name="字符串笔记.md" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/技术文档/redis源码/源码阅读记录/字符串笔记.md">
               <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
                 <state split_layout="FIRST">
-                  <first_editor vertical-scroll-proportion="0.75842047">
-                    <caret line="86" column="8" selection-start-line="86" selection-start-column="8" selection-end-line="86" selection-end-column="8" />
+                  <first_editor vertical-scroll-proportion="0.7886179">
+                    <caret line="56" column="10" selection-start-line="56" selection-start-column="10" selection-end-line="56" selection-end-column="10" />
                     <folding />
                   </first_editor>
                   <second_editor />
@@ -128,7 +138,6 @@
         <option value="$PROJECT_DIR$/技术文档/redis源码/Redis-Code-master/struct/t_list.c" />
         <option value="$PROJECT_DIR$/技术文档/redis源码/Redis-Code-master/struct/adlist.h" />
         <option value="$PROJECT_DIR$/技术文档/redis源码/Redis-Code-master/struct/adlist.c" />
-        <option value="$PROJECT_DIR$/技术文档/redis源码/Redis-Code-master/data/db.c" />
         <option value="$PROJECT_DIR$/技术文档/redis源码/redis-3.0-annotated-unstable/src/object.c" />
         <option value="$PROJECT_DIR$/技术文档/redis源码/源码阅读记录/redis的编码检查.md" />
         <option value="$PROJECT_DIR$/技术文档/redis源码/源码阅读记录/链表笔记.md" />
@@ -138,6 +147,9 @@
         <option value="$PROJECT_DIR$/技术文档/redis源码/Redis-Code-master/struct/t_hash.c" />
         <option value="$PROJECT_DIR$/技术文档/redis源码/Redis-Code-master/struct/ziplist.c" />
         <option value="$PROJECT_DIR$/技术文档/redis源码/源码阅读记录/哈希笔记.md" />
+        <option value="$PROJECT_DIR$/技术文档/redis源码/Redis-Code-master/net/networking.c" />
+        <option value="$PROJECT_DIR$/技术文档/redis源码/Redis-Code-master/data/db.c" />
+        <option value="$PROJECT_DIR$/技术文档/redis源码/源码阅读记录/字符串笔记.md" />
       </list>
     </option>
   </component>
@@ -211,28 +223,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="技术文档" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="learngit" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="blog" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="技术文档" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="redis源码" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="源码阅读记录" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -361,7 +351,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="0" width="1932" height="1056" extended-state="1" />
+    <frame x="-8" y="0" width="1932" height="1056" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12160751" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -391,32 +381,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/技术文档/redis源码/源码阅读记录/从客户端到服务器再到客户端的流程.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="FIRST">
-          <first_editor vertical-scroll-proportion="0.0">
-            <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-      <provider editor-type-id="MarkdownFxPreviewEditor">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/架构/项目代码结构杂谈.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="FIRST">
-          <first_editor vertical-scroll-proportion="0.0">
-            <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-      <provider editor-type-id="MarkdownFxPreviewEditor">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mysql/索引/索引结构.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="FIRST">
@@ -678,22 +642,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/技术文档/redis源码/Redis-Code-master/struct/sds.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="62" column="20" selection-start-line="62" selection-start-column="20" selection-end-line="62" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/技术文档/redis源码/Redis-Code-master/struct/sds.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6521265">
-          <caret line="278" column="20" selection-start-line="278" selection-start-column="20" selection-end-line="278" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/技术文档/redis源码/redis-3.0-annotated-unstable/src/redis.c">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -764,14 +712,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/技术文档/redis源码/Redis-Code-master/struct/t_string.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.466666">
-          <caret line="319" column="5" selection-start-line="319" selection-start-column="5" selection-end-line="319" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/技术文档/redis源码/Redis-Code-master/struct/adlist.c">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-21.966667">
@@ -818,34 +758,10 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/技术文档/redis源码/Redis-Code-master/wrapper/object.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-20.233334">
-          <caret line="417" column="32" selection-start-line="417" selection-start-column="14" selection-end-line="417" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/技术文档/redis源码/Redis-Code-master/data/db.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33260632">
-          <caret line="116" column="6" selection-start-line="116" selection-start-column="6" selection-end-line="116" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/技术文档/redis源码/Redis-Code-master/struct/ziplist.c">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-9.833333">
           <caret line="339" column="37" selection-start-line="339" selection-start-column="20" selection-end-line="339" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/技术文档/redis源码/Redis-Code-master/struct/dict.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.833333">
-          <caret line="828" column="16" selection-start-line="828" selection-start-column="8" selection-end-line="828" selection-end-column="16" />
           <folding />
         </state>
       </provider>
@@ -860,8 +776,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/技术文档/redis源码/Redis-Code-master/struct/t_hash.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7429538">
-          <caret line="630" column="34" selection-start-line="630" selection-start-column="34" selection-end-line="630" selection-end-column="34" />
+        <state vertical-scroll-proportion="1.2705749">
+          <caret line="615" column="9" selection-start-line="615" selection-start-column="9" selection-end-line="615" selection-end-column="9" />
           <folding />
         </state>
       </provider>
@@ -869,8 +785,78 @@
     <entry file="file://$PROJECT_DIR$/技术文档/redis源码/源码阅读记录/哈希笔记.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="FIRST">
-          <first_editor vertical-scroll-proportion="0.75842047">
-            <caret line="86" column="8" selection-start-line="86" selection-start-column="8" selection-end-line="86" selection-end-column="8" />
+          <first_editor vertical-scroll-proportion="2.657375">
+            <caret line="88" column="0" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+      <provider editor-type-id="MarkdownFxPreviewEditor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/技术文档/redis源码/Redis-Code-master/wrapper/object.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0045095826">
+          <caret line="417" column="32" selection-start-line="417" selection-start-column="14" selection-end-line="417" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/技术文档/redis源码/Redis-Code-master/data/db.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.3">
+          <caret line="102" column="30" selection-start-line="102" selection-start-column="20" selection-end-line="102" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/技术文档/redis源码/Redis-Code-master/struct/dict.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.833333">
+          <caret line="564" column="26" selection-start-line="564" selection-start-column="16" selection-end-line="564" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/技术文档/redis源码/Redis-Code-master/struct/sds.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.13333334">
+          <caret line="62" column="20" selection-start-line="62" selection-start-column="20" selection-end-line="62" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/技术文档/redis源码/Redis-Code-master/struct/sds.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.833333">
+          <caret line="64" column="14" selection-start-line="64" selection-start-column="8" selection-end-line="64" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/技术文档/redis源码/Redis-Code-master/struct/t_string.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.5">
+          <caret line="276" column="33" selection-start-line="276" selection-start-column="13" selection-end-line="276" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/技术文档/redis源码/Redis-Code-master/net/networking.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.019165726">
+          <caret line="331" column="26" selection-start-line="331" selection-start-column="5" selection-end-line="331" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/技术文档/redis源码/源码阅读记录/字符串笔记.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="FIRST">
+          <first_editor vertical-scroll-proportion="0.7886179">
+            <caret line="56" column="10" selection-start-line="56" selection-start-column="10" selection-end-line="56" selection-end-column="10" />
             <folding />
           </first_editor>
           <second_editor />
