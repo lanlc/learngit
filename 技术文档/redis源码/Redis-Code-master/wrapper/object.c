@@ -83,9 +83,13 @@ void objectCommand(redisClient *c)
 /* 最初的创建robj对象方法 */	
 robj *createObject(int type, void *ptr) {
     robj *o = zmalloc(sizeof(*o));
+    //类型
     o->type = type;
+    //编码
     o->encoding = REDIS_ENCODING_RAW;
+    //底层实现指针
     o->ptr = ptr;
+    //引用计数
     o->refcount = 1;
 
     /* Set the LRU to the current lruclock (minutes resolution). */
@@ -142,43 +146,47 @@ robj *dupStringObject(robj *o) {
     redisAssertWithInfo(NULL,o,o->encoding == REDIS_ENCODING_RAW);
     return createStringObject(o->ptr,sdslen(o->ptr));
 }
-
+//创建列表对象
 robj *createListObject(void) {
     list *l = listCreate();
     robj *o = createObject(REDIS_LIST,l);
     listSetFreeMethod(l,decrRefCountVoid);
+    //编码为双端链表
     o->encoding = REDIS_ENCODING_LINKEDLIST;
     return o;
 }
-
+//创建压缩链表对象
 robj *createZiplistObject(void) {
     unsigned char *zl = ziplistNew();
     robj *o = createObject(REDIS_LIST,zl);
+    //编码为压缩链表
     o->encoding = REDIS_ENCODING_ZIPLIST;
     return o;
 }
-
+//创建集合对象，底层为字典
 robj *createSetObject(void) {
     dict *d = dictCreate(&setDictType,NULL);
     robj *o = createObject(REDIS_SET,d);
+    //编码为哈希字典
     o->encoding = REDIS_ENCODING_HT;
     return o;
 }
-
+//创建整数集合对象
 robj *createIntsetObject(void) {
     intset *is = intsetNew();
     robj *o = createObject(REDIS_SET,is);
     o->encoding = REDIS_ENCODING_INTSET;
     return o;
 }
-
+//创建哈希对象
 robj *createHashObject(void) {
     unsigned char *zl = ziplistNew();
     robj *o = createObject(REDIS_HASH, zl);
+    //地底层实现为压缩链表
     o->encoding = REDIS_ENCODING_ZIPLIST;
     return o;
 }
-
+//创建有序集合对象，底层为跳跃表
 robj *createZsetObject(void) {
     zset *zs = zmalloc(sizeof(*zs));
     robj *o;
@@ -189,7 +197,7 @@ robj *createZsetObject(void) {
     o->encoding = REDIS_ENCODING_SKIPLIST;
     return o;
 }
-
+//创建有序集合对象，底层为压缩链表
 robj *createZsetZiplistObject(void) {
     unsigned char *zl = ziplistNew();
     robj *o = createObject(REDIS_ZSET,zl);
@@ -197,13 +205,14 @@ robj *createZsetZiplistObject(void) {
     return o;
 }
 
-/* free Obj中的特定对象 */
+/* 释放字符串对象 */
 void freeStringObject(robj *o) {
     if (o->encoding == REDIS_ENCODING_RAW) {
         sdsfree(o->ptr);
     }
 }
 
+//释放列表
 void freeListObject(robj *o) {
     switch (o->encoding) {
     case REDIS_ENCODING_LINKEDLIST:
@@ -217,6 +226,7 @@ void freeListObject(robj *o) {
     }
 }
 
+//释放集合
 void freeSetObject(robj *o) {
     switch (o->encoding) {
     case REDIS_ENCODING_HT:
@@ -230,6 +240,7 @@ void freeSetObject(robj *o) {
     }
 }
 
+//释放有序集合
 void freeZsetObject(robj *o) {
     zset *zs;
     switch (o->encoding) {
@@ -247,7 +258,7 @@ void freeZsetObject(robj *o) {
     }
 }
 
-/* 释放hashObject有2种形式，1个是o-ptr的字典对象，还有1个回事压缩表o->ptr */
+//释放哈希对象
 void freeHashObject(robj *o) {
     switch (o->encoding) {
     case REDIS_ENCODING_HT:
@@ -351,10 +362,13 @@ robj *tryObjectEncoding(robj *o) {
      if (o->refcount > 1) return o;
 
     /* Currently we try to encode only strings */
+    //如果断言为真，执行一个空操作；断言为假，会打印关键的信息。
+    //这里只能对字符串进行编码，否则会打印信息
     redisAssertWithInfo(NULL,o,o->type == REDIS_STRING);
 
     /* Check if we can represent this string as a long integer */
     len = sdslen(s);
+    //String类型转换为long类型
     if (len > 21 || !string2l(s,len,&value)) {
         /* We can't encode the object...
          *
@@ -366,9 +380,7 @@ robj *tryObjectEncoding(robj *o) {
          * of 32 bytes. This code was backported from the unstable branch
          * where this is performed when the object is too large to be
          * encoded as EMBSTR. */
-        if (len > 32 &&
-            o->encoding == REDIS_ENCODING_RAW &&
-            sdsavail(s) > len/10)
+        if (len > 32 && o->encoding == REDIS_ENCODING_RAW && sdsavail(s) > len/10)
         {
         	//调用sdsRemoveFreeSpace把0->ptr中的字符串中的空格给移除掉
             o->ptr = sdsRemoveFreeSpace(o->ptr);
@@ -394,7 +406,9 @@ robj *tryObjectEncoding(robj *o) {
         return shared.integers[value];
     } else {
         o->encoding = REDIS_ENCODING_INT;
+        //释放指向的指针内存
         sdsfree(o->ptr);
+        //直接赋值
         o->ptr = (void*) value;
         return o;
     }
@@ -565,7 +579,7 @@ int getLongDoubleFromObject(robj *o, long double *target) {
     *target = value;
     return REDIS_OK;
 }
-
+//获取浮点型，不成功则输出回复
 int getLongDoubleFromObjectOrReply(redisClient *c, robj *o, long double *target, const char *msg) {
     long double value;
     if (getLongDoubleFromObject(o, &value) != REDIS_OK) {
@@ -579,7 +593,7 @@ int getLongDoubleFromObjectOrReply(redisClient *c, robj *o, long double *target,
     *target = value;
     return REDIS_OK;
 }
-
+//返回整型或字符型
 int getLongLongFromObject(robj *o, long long *target) {
     long long value;
     char *eptr;
