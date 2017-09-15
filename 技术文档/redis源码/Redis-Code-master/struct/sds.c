@@ -59,7 +59,9 @@ sds sdsnewlen(const void *init, size_t initlen) {
         sh = zcalloc(sizeof(struct sdshdr)+initlen+1);
     }
     if (sh == NULL) return NULL;
+    //长度
     sh->len = initlen;
+    //可用空间
     sh->free = 0;
     if (initlen && init)
         memcpy(sh->buf, init, initlen);

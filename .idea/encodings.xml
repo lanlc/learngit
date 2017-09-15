@@ -20,6 +20,7 @@
     <file url="file://$PROJECT_DIR$/技术文档/redis源码/Redis-Code-master/struct/t_list.c" charset="GBK" />
     <file url="file://$PROJECT_DIR$/技术文档/redis源码/Redis-Code-master/struct/t_string.c" charset="GBK" />
     <file url="file://$PROJECT_DIR$/技术文档/redis源码/Redis-Code-master/struct/ziplist.c" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/技术文档/redis源码/Redis-Code-master/struct/ziplist.h" charset="GBK" />
     <file url="file://$PROJECT_DIR$/技术文档/redis源码/Redis-Code-master/tool/bitops.c" charset="GBK" />
     <file url="file://$PROJECT_DIR$/技术文档/redis源码/Redis-Code-master/tool/crc64.c" charset="GBK" />
     <file url="file://$PROJECT_DIR$/技术文档/redis源码/Redis-Code-master/tool/help.h" charset="GBK" />
