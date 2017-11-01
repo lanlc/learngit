@@ -19,6 +19,7 @@
     <file url="file://$PROJECT_DIR$/struct/sds.c" charset="GBK" />
     <file url="file://$PROJECT_DIR$/struct/t_list.c" charset="GBK" />
     <file url="file://$PROJECT_DIR$/struct/t_string.c" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/test/memtest.c" charset="GBK" />
     <file url="file://$PROJECT_DIR$/wrapper/object.c" charset="GBK" />
     <file url="PROJECT" charset="UTF-8" />
   </component>

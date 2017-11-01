@@ -507,7 +507,7 @@ typedef struct redisObject {
 } while(0);
 
 typedef struct redisDb {
-    dict *dict;                 /* The keyspace for this DB *///¼ä¿Õ¼ä×Öµä
+    dict *dict;                 /* The keyspace for this DB *///¼ü¿Õ¼ä×Öµä
     dict *expires;              /* Timeout of keys with a timeout set *///¹ýÆÚ×Öµä
     dict *blocking_keys;        /* Keys with clients waiting for data (BLPOP) */
     dict *ready_keys;           /* Blocked keys that received a PUSH */
