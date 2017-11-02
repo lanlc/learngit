@@ -21,12 +21,9 @@
     <favorites_list name="learngit" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="php-resque.md" pinned="false" current-in-tab="true">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="php-resque.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/技术文档/队列/php-resque.md">
-          <provider editor-type-id="MarkdownFxPreviewEditor">
-            <state />
-          </provider>
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="FIRST">
               <first_editor vertical-scroll-proportion="0.80487806">
@@ -34,6 +31,129 @@
                 <folding />
               </first_editor>
               <second_editor />
+            </state>
+          </provider>
+          <provider editor-type-id="MarkdownFxPreviewEditor">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="resque" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/技术文档/队列/php-resque/bin/resque">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-21.0">
+              <caret line="129" column="15" selection-start-line="129" selection-start-column="15" selection-end-line="129" selection-end-column="15" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Worker.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/技术文档/队列/php-resque/lib/Resque/Worker.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.7470726">
+              <caret line="252" column="39" selection-start-line="252" selection-start-column="39" selection-end-line="252" selection-end-column="39" />
+              <folding>
+                <element signature="n#__construct#0;n#Resque_Worker#0;n#!!top" expanded="true" />
+                <element signature="n#work#0;n#Resque_Worker#0;n#!!top" expanded="true" />
+                <element signature="n#perform#0;n#Resque_Worker#0;n#!!top" expanded="true" />
+                <element signature="n#reserve#0;n#Resque_Worker#0;n#!!top" expanded="true" />
+                <element signature="n#startup#0;n#Resque_Worker#0;n#!!top" expanded="true" />
+                <element signature="n#updateProcLine#0;n#Resque_Worker#0;n#!!top" expanded="true" />
+                <element signature="n#registerSigHandlers#0;n#Resque_Worker#0;n#!!top" expanded="true" />
+                <element signature="n#pauseProcessing#0;n#Resque_Worker#0;n#!!top" expanded="true" />
+                <element signature="n#unPauseProcessing#0;n#Resque_Worker#0;n#!!top" expanded="true" />
+                <element signature="n#shutdown#0;n#Resque_Worker#0;n#!!top" expanded="true" />
+                <element signature="n#shutdownNow#0;n#Resque_Worker#0;n#!!top" expanded="true" />
+                <element signature="n#killChild#0;n#Resque_Worker#0;n#!!top" expanded="true" />
+                <element signature="n#pruneDeadWorkers#0;n#Resque_Worker#0;n#!!top" expanded="true" />
+                <element signature="n#registerWorker#0;n#Resque_Worker#0;n#!!top" expanded="true" />
+                <element signature="n#workingOn#0;n#Resque_Worker#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Job.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/技术文档/队列/php-resque/lib/Resque/Job.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-8.909091">
+              <caret line="183" column="20" selection-start-line="183" selection-start-column="20" selection-end-line="183" selection-end-column="20" />
+              <folding>
+                <element signature="n#__construct#0;n#Resque_Job#0;n#!!top" expanded="true" />
+                <element signature="n#reserve#0;n#Resque_Job#0;n#!!top" expanded="true" />
+                <element signature="n#reserveBlocking#0;n#Resque_Job#0;n#!!top" expanded="true" />
+                <element signature="n#getInstance#0;n#Resque_Job#0;n#!!top" expanded="true" />
+                <element signature="n#perform#0;n#Resque_Job#0;n#!!top" expanded="true" />
+                <element signature="n#fail#0;n#Resque_Job#0;n#!!top" expanded="true" />
+                <element signature="n#getJobFactory#0;n#Resque_Job#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Failure.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/技术文档/队列/php-resque/lib/Resque/Failure.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-26.714285">
+              <caret line="51" column="47" selection-start-line="51" selection-start-column="47" selection-end-line="51" selection-end-column="47" />
+              <folding>
+                <element signature="n#create#0;n#Resque_Failure#0;n#!!top" expanded="true" />
+                <element signature="n#getBackend#0;n#Resque_Failure#0;n#!!top" expanded="true" />
+                <element signature="n#setBackend#0;n#Resque_Failure#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Factory.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/技术文档/队列/php-resque/lib/Resque/Job/Factory.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-3.0">
+              <caret line="12" column="53" selection-start-line="12" selection-start-column="53" selection-end-line="12" selection-end-column="53" />
+              <folding>
+                <element signature="n#create#0;n#Resque_Job_Factory#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EventTest.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/技术文档/队列/php-resque/test/Resque/Tests/EventTest.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-8.909091">
+              <caret line="155" column="20" selection-start-line="155" selection-start-column="20" selection-end-line="155" selection-end-column="20" />
+              <folding>
+                <element signature="n#testStopListeningRemovesListener#0;n#Resque_Tests_EventTest#0;n#!!top" expanded="true" />
+                <element signature="n#assertValidEventCallback#0;n#Resque_Tests_EventTest#0;n#!!top" expanded="true" />
+                <element signature="n#beforePerformEventCallback#0;n#Resque_Tests_EventTest#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Resque.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/技术文档/队列/php-resque/lib/Resque.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-4.1904764">
+              <caret line="76" column="31" selection-start-line="76" selection-start-column="27" selection-end-line="76" selection-end-column="31" />
+              <folding>
+                <element signature="n#fork#0;n#Resque#0;n#!!top" expanded="true" />
+                <element signature="n#pop#0;n#Resque#0;n#!!top" expanded="true" />
+                <element signature="n#blpop#0;n#Resque#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Log.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/技术文档/队列/php-resque/lib/Resque/Log.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-9.242424">
+              <caret line="12" column="20" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
+              <folding>
+                <element signature="n#__construct#0;n#Resque_Log#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -46,7 +166,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/技术文档/redis源码/Redis-Code-master-init/event/ae.c" />
         <option value="$PROJECT_DIR$/技术文档/redis源码/Redis-Code-master/event/ae_epoll.c" />
         <option value="$PROJECT_DIR$/技术文档/redis源码/Redis-Code-master/event/ae.c" />
         <option value="$PROJECT_DIR$/技术文档/redis源码/redis-3.0-annotated-unstable/src/networking.c" />
@@ -97,6 +216,7 @@
         <option value="$PROJECT_DIR$/工作心得记录/工作情商/20160720-20170620.md" />
         <option value="$PROJECT_DIR$/工作心得记录/修身/个人总结.md" />
         <option value="$PROJECT_DIR$/技术文档/队列/php-resque.md" />
+        <option value="$PROJECT_DIR$/技术文档/队列/php-resque/lib/Resque/Worker.php" />
       </list>
     </option>
   </component>
@@ -140,7 +260,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -172,27 +291,10 @@
               <option name="myItemId" value="技术文档" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="队列" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="learngit" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="blog" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="技术文档" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -257,11 +359,11 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6807611" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6807611" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -280,88 +382,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/技术文档/数据报表/后台生成报表.md">
-      <provider editor-type-id="MarkdownFxPreviewEditor">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="FIRST">
-          <first_editor vertical-scroll-proportion="1.2415795">
-            <caret line="48" column="3" selection-start-line="48" selection-start-column="3" selection-end-line="48" selection-end-column="3" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/技术文档/redis源码/redis-3.0-annotated-unstable/src/redis.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="201" column="25" selection-start-line="201" selection-start-column="13" selection-end-line="201" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/技术文档/redis源码/Redis-Code-master-init/struct/t_string.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="35" column="15" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/技术文档/redis源码/redis-3.0-annotated-unstable/src/object.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.016357688">
-          <caret line="566" column="12" selection-start-line="566" selection-start-column="12" selection-end-line="566" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/技术文档/redis源码/源码阅读记录/redis的编码检查.md">
-      <provider editor-type-id="MarkdownFxPreviewEditor">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="FIRST">
-          <first_editor vertical-scroll-proportion="0.30197445">
-            <caret line="10" column="21" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/技术文档/redis源码/Redis-Code-master/struct/adlist.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.5666666">
-          <caret line="66" column="10" selection-start-line="66" selection-start-column="10" selection-end-line="66" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/技术文档/redis源码/redis-3.0-annotated-unstable/deps/hiredis/hiredis.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3805889">
-          <caret line="96" column="13" selection-start-line="96" selection-start-column="13" selection-end-line="96" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/技术文档/redis源码/redis-3.0-annotated-unstable/deps/jemalloc/include/msvc_compat/stdint.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.099236645">
-          <caret line="140" column="30" selection-start-line="140" selection-start-column="21" selection-end-line="140" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/技术文档/redis源码/redis-3.0-annotated-unstable/src/db.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="127" column="6" selection-start-line="127" selection-start-column="6" selection-end-line="127" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/技术文档/redis源码/Redis-Code-master/struct/adlist.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-21.966667">
-          <caret line="384" column="1" selection-start-line="384" selection-start-column="1" selection-end-line="384" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/技术文档/redis源码/redis-3.0-annotated-unstable/src/ziplist.c">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-13.3">
@@ -384,9 +404,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/技术文档/redis源码/源码阅读记录/哈希笔记.md">
-      <provider editor-type-id="MarkdownFxPreviewEditor">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="FIRST">
           <first_editor vertical-scroll-proportion="2.657375">
@@ -394,6 +411,9 @@
           </first_editor>
           <second_editor />
         </state>
+      </provider>
+      <provider editor-type-id="MarkdownFxPreviewEditor">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/技术文档/redis源码/redis-3.0-annotated-unstable/src/intset.c">
@@ -432,9 +452,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/技术文档/redis源码/源码阅读记录/集合笔记.md">
-      <provider selected="true" editor-type-id="MarkdownFxPreviewEditor">
-        <state />
-      </provider>
       <provider editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="FIRST">
           <first_editor vertical-scroll-proportion="0.0">
@@ -443,11 +460,11 @@
           <second_editor />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/技术文档/redis源码/源码阅读记录/应用场景汇总.md">
-      <provider editor-type-id="MarkdownFxPreviewEditor">
+      <provider selected="true" editor-type-id="MarkdownFxPreviewEditor">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/技术文档/redis源码/源码阅读记录/应用场景汇总.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="FIRST">
           <first_editor vertical-scroll-proportion="0.7549361">
@@ -455,6 +472,9 @@
           </first_editor>
           <second_editor />
         </state>
+      </provider>
+      <provider editor-type-id="MarkdownFxPreviewEditor">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/技术文档/redis源码/Redis-Code-master/struct/t_zset.c">
@@ -465,9 +485,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/技术文档/redis源码/源码阅读记录/有序集合.md">
-      <provider editor-type-id="MarkdownFxPreviewEditor">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="FIRST">
           <first_editor vertical-scroll-proportion="0.6980255">
@@ -475,6 +492,9 @@
           </first_editor>
           <second_editor />
         </state>
+      </provider>
+      <provider editor-type-id="MarkdownFxPreviewEditor">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/技术文档/redis源码/Redis-Code-master/tool/debug.c">
@@ -534,9 +554,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/技术文档/redis源码/源码阅读记录/字符串笔记.md">
-      <provider editor-type-id="MarkdownFxPreviewEditor">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="FIRST">
           <first_editor vertical-scroll-proportion="0.0">
@@ -545,11 +562,11 @@
           <second_editor />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/技术文档/redis源码/源码阅读记录/列表表笔记.md">
       <provider editor-type-id="MarkdownFxPreviewEditor">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/技术文档/redis源码/源码阅读记录/列表表笔记.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="FIRST">
           <first_editor vertical-scroll-proportion="0.543554">
@@ -557,6 +574,9 @@
           </first_editor>
           <second_editor />
         </state>
+      </provider>
+      <provider editor-type-id="MarkdownFxPreviewEditor">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/技术文档/redis源码/Redis-Code-master/struct/dict.c">
@@ -574,9 +594,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/技术文档/redis源码/源码阅读记录/数据结构/链表.md">
-      <provider editor-type-id="MarkdownFxPreviewEditor">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="FIRST">
           <first_editor vertical-scroll-proportion="0.0">
@@ -585,11 +602,11 @@
           <second_editor />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/技术文档/redis源码/源码阅读记录/数据结构/字典.md">
       <provider editor-type-id="MarkdownFxPreviewEditor">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/技术文档/redis源码/源码阅读记录/数据结构/字典.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="FIRST">
           <first_editor vertical-scroll-proportion="0.0">
@@ -597,6 +614,9 @@
           </first_editor>
           <second_editor />
         </state>
+      </provider>
+      <provider editor-type-id="MarkdownFxPreviewEditor">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/技术文档/redis源码/Redis-Code-master/struct/ziplist.c">
@@ -614,9 +634,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/技术文档/redis源码/源码阅读记录/数据结构/跳跃表.md">
-      <provider editor-type-id="MarkdownFxPreviewEditor">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="FIRST">
           <first_editor vertical-scroll-proportion="0.24157956">
@@ -625,11 +642,11 @@
           <second_editor />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/技术文档/redis源码/源码阅读记录/数据结构/整数集合.md">
       <provider editor-type-id="MarkdownFxPreviewEditor">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/技术文档/redis源码/源码阅读记录/数据结构/整数集合.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="FIRST">
           <first_editor vertical-scroll-proportion="0.21138212">
@@ -638,11 +655,11 @@
           <second_editor />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/技术文档/redis源码/源码阅读记录/数据结构/压缩链表.md">
       <provider editor-type-id="MarkdownFxPreviewEditor">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/技术文档/redis源码/源码阅读记录/数据结构/压缩链表.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="FIRST">
           <first_editor vertical-scroll-proportion="0.63414633">
@@ -650,6 +667,9 @@
           </first_editor>
           <second_editor />
         </state>
+      </provider>
+      <provider editor-type-id="MarkdownFxPreviewEditor">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/技术文档/redis源码/Redis-Code-master/struct/sds.h">
@@ -667,9 +687,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/技术文档/redis源码/源码阅读记录/数据结构/字符串对象.md">
-      <provider editor-type-id="MarkdownFxPreviewEditor">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="FIRST">
           <first_editor vertical-scroll-proportion="0.18118466">
@@ -678,11 +695,11 @@
           <second_editor />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/技术文档/redis源码/源码阅读记录/对象笔记.md">
       <provider editor-type-id="MarkdownFxPreviewEditor">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/技术文档/redis源码/源码阅读记录/对象笔记.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="FIRST">
           <first_editor vertical-scroll-proportion="0.36236933">
@@ -691,11 +708,11 @@
           <second_editor />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/工作心得记录/修身/个人总结.md">
       <provider editor-type-id="MarkdownFxPreviewEditor">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/工作心得记录/修身/个人总结.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="FIRST">
           <first_editor vertical-scroll-proportion="0.12078978">
@@ -704,11 +721,11 @@
           <second_editor />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/工作心得记录/工作情商/20160720-20170620.md">
       <provider editor-type-id="MarkdownFxPreviewEditor">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/工作心得记录/工作情商/20160720-20170620.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="FIRST">
           <first_editor vertical-scroll-proportion="0.0">
@@ -716,12 +733,12 @@
           </first_editor>
           <second_editor />
         </state>
+      </provider>
+      <provider editor-type-id="MarkdownFxPreviewEditor">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/工作心得记录/工作情商/主管的指导.md">
-      <provider editor-type-id="MarkdownFxPreviewEditor">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="FIRST">
           <first_editor vertical-scroll-proportion="0.0">
@@ -729,26 +746,25 @@
           </first_editor>
           <second_editor />
         </state>
+      </provider>
+      <provider editor-type-id="MarkdownFxPreviewEditor">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
-      <provider editor-type-id="MarkdownFxPreviewEditor">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="FIRST">
           <first_editor vertical-scroll-proportion="0.0">
             <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/技术文档/队列/php-resque.md">
       <provider editor-type-id="MarkdownFxPreviewEditor">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/技术文档/队列/php-resque.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="FIRST">
           <first_editor vertical-scroll-proportion="0.80487806">
@@ -756,6 +772,132 @@
             <folding />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+      <provider editor-type-id="MarkdownFxPreviewEditor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/技术文档/队列/php-resque/lib/Resque/Log.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.242424">
+          <caret line="12" column="20" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
+          <folding>
+            <element signature="n#__construct#0;n#Resque_Log#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/技术文档/队列/php-resque/bin/resque">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-21.0">
+          <caret line="129" column="15" selection-start-line="129" selection-start-column="15" selection-end-line="129" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/技术文档/队列/php-resque/lib/Resque.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.1904764">
+          <caret line="76" column="31" selection-start-line="76" selection-start-column="27" selection-end-line="76" selection-end-column="31" />
+          <folding>
+            <element signature="n#fork#0;n#Resque#0;n#!!top" expanded="true" />
+            <element signature="n#pop#0;n#Resque#0;n#!!top" expanded="true" />
+            <element signature="n#blpop#0;n#Resque#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/技术文档/队列/php-resque/test/Resque/Tests/EventTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.909091">
+          <caret line="155" column="20" selection-start-line="155" selection-start-column="20" selection-end-line="155" selection-end-column="20" />
+          <folding>
+            <element signature="n#testStopListeningRemovesListener#0;n#Resque_Tests_EventTest#0;n#!!top" expanded="true" />
+            <element signature="n#assertValidEventCallback#0;n#Resque_Tests_EventTest#0;n#!!top" expanded="true" />
+            <element signature="n#beforePerformEventCallback#0;n#Resque_Tests_EventTest#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/技术文档/队列/php-resque/lib/Resque/Job/Factory.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.0">
+          <caret line="12" column="53" selection-start-line="12" selection-start-column="53" selection-end-line="12" selection-end-column="53" />
+          <folding>
+            <element signature="n#create#0;n#Resque_Job_Factory#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/技术文档/队列/php-resque/extras/sample-plugin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.14932127">
+          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/技术文档/队列/php-resque/lib/Resque/Event.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3325527">
+          <caret line="49" column="27" selection-start-line="49" selection-start-column="27" selection-end-line="49" selection-end-column="27" />
+          <folding>
+            <element signature="n#trigger#0;n#Resque_Event#0;n#!!top" expanded="true" />
+            <element signature="n#listen#0;n#Resque_Event#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/技术文档/队列/php-resque/lib/Resque/Failure.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-26.714285">
+          <caret line="51" column="47" selection-start-line="51" selection-start-column="47" selection-end-line="51" selection-end-column="47" />
+          <folding>
+            <element signature="n#create#0;n#Resque_Failure#0;n#!!top" expanded="true" />
+            <element signature="n#getBackend#0;n#Resque_Failure#0;n#!!top" expanded="true" />
+            <element signature="n#setBackend#0;n#Resque_Failure#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/技术文档/队列/php-resque/lib/Resque/Job.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.909091">
+          <caret line="183" column="20" selection-start-line="183" selection-start-column="20" selection-end-line="183" selection-end-column="20" />
+          <folding>
+            <element signature="n#__construct#0;n#Resque_Job#0;n#!!top" expanded="true" />
+            <element signature="n#reserve#0;n#Resque_Job#0;n#!!top" expanded="true" />
+            <element signature="n#reserveBlocking#0;n#Resque_Job#0;n#!!top" expanded="true" />
+            <element signature="n#getInstance#0;n#Resque_Job#0;n#!!top" expanded="true" />
+            <element signature="n#perform#0;n#Resque_Job#0;n#!!top" expanded="true" />
+            <element signature="n#fail#0;n#Resque_Job#0;n#!!top" expanded="true" />
+            <element signature="n#getJobFactory#0;n#Resque_Job#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/技术文档/队列/php-resque/lib/Resque/Worker.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7470726">
+          <caret line="252" column="39" selection-start-line="252" selection-start-column="39" selection-end-line="252" selection-end-column="39" />
+          <folding>
+            <element signature="n#__construct#0;n#Resque_Worker#0;n#!!top" expanded="true" />
+            <element signature="n#work#0;n#Resque_Worker#0;n#!!top" expanded="true" />
+            <element signature="n#perform#0;n#Resque_Worker#0;n#!!top" expanded="true" />
+            <element signature="n#reserve#0;n#Resque_Worker#0;n#!!top" expanded="true" />
+            <element signature="n#startup#0;n#Resque_Worker#0;n#!!top" expanded="true" />
+            <element signature="n#updateProcLine#0;n#Resque_Worker#0;n#!!top" expanded="true" />
+            <element signature="n#registerSigHandlers#0;n#Resque_Worker#0;n#!!top" expanded="true" />
+            <element signature="n#pauseProcessing#0;n#Resque_Worker#0;n#!!top" expanded="true" />
+            <element signature="n#unPauseProcessing#0;n#Resque_Worker#0;n#!!top" expanded="true" />
+            <element signature="n#shutdown#0;n#Resque_Worker#0;n#!!top" expanded="true" />
+            <element signature="n#shutdownNow#0;n#Resque_Worker#0;n#!!top" expanded="true" />
+            <element signature="n#killChild#0;n#Resque_Worker#0;n#!!top" expanded="true" />
+            <element signature="n#pruneDeadWorkers#0;n#Resque_Worker#0;n#!!top" expanded="true" />
+            <element signature="n#registerWorker#0;n#Resque_Worker#0;n#!!top" expanded="true" />
+            <element signature="n#workingOn#0;n#Resque_Worker#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
