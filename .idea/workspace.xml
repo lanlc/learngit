@@ -21,56 +21,7 @@
     <favorites_list name="learngit" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="mysql架构.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/技术文档/Mysql/mysql架构.md">
-          <provider editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-            <state split_layout="FIRST">
-              <first_editor vertical-scroll-proportion="0.23344947">
-                <caret line="53" column="9" selection-start-line="53" selection-start-column="9" selection-end-line="53" selection-end-column="9" />
-                <folding />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-          <provider selected="true" editor-type-id="MarkdownFxPreviewEditor">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="基础习惯.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/技术文档/Mysql/基础习惯.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-            <state split_layout="FIRST">
-              <first_editor vertical-scroll-proportion="0.1533101">
-                <caret line="4" column="22" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="28" />
-                <folding />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-          <provider editor-type-id="MarkdownFxPreviewEditor">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="索引.md" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/技术文档/Mysql/索引.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-            <state split_layout="FIRST">
-              <first_editor vertical-scroll-proportion="0.6132404">
-                <caret line="16" column="65" selection-start-line="16" selection-start-column="65" selection-end-line="16" selection-end-column="65" />
-                <folding />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-          <provider editor-type-id="MarkdownFxPreviewEditor">
-            <state />
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -282,10 +233,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="0" width="1932" height="1056" extended-state="0" />
+    <frame x="-8" y="0" width="1932" height="1056" extended-state="1" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1565762" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1565762" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980973" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -658,7 +609,7 @@
         <state vertical-scroll-proportion="-9.242424">
           <caret line="12" column="20" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
           <folding>
-            <element signature="n#__construct#0;n#Resque_Log#0;n#!!top" expanded="true" />
+            <element signature="n#__construct#0;n#Resque_Log#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -676,9 +627,9 @@
         <state vertical-scroll-proportion="-4.1904764">
           <caret line="76" column="31" selection-start-line="76" selection-start-column="27" selection-end-line="76" selection-end-column="31" />
           <folding>
-            <element signature="n#fork#0;n#Resque#0;n#!!top" expanded="true" />
-            <element signature="n#pop#0;n#Resque#0;n#!!top" expanded="true" />
-            <element signature="n#blpop#0;n#Resque#0;n#!!top" expanded="true" />
+            <element signature="n#fork#0;n#Resque#0;n#!!top" expanded="false" />
+            <element signature="n#pop#0;n#Resque#0;n#!!top" expanded="false" />
+            <element signature="n#blpop#0;n#Resque#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -688,9 +639,9 @@
         <state vertical-scroll-proportion="-8.909091">
           <caret line="155" column="20" selection-start-line="155" selection-start-column="20" selection-end-line="155" selection-end-column="20" />
           <folding>
-            <element signature="n#testStopListeningRemovesListener#0;n#Resque_Tests_EventTest#0;n#!!top" expanded="true" />
-            <element signature="n#assertValidEventCallback#0;n#Resque_Tests_EventTest#0;n#!!top" expanded="true" />
-            <element signature="n#beforePerformEventCallback#0;n#Resque_Tests_EventTest#0;n#!!top" expanded="true" />
+            <element signature="n#testStopListeningRemovesListener#0;n#Resque_Tests_EventTest#0;n#!!top" expanded="false" />
+            <element signature="n#assertValidEventCallback#0;n#Resque_Tests_EventTest#0;n#!!top" expanded="false" />
+            <element signature="n#beforePerformEventCallback#0;n#Resque_Tests_EventTest#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -700,7 +651,7 @@
         <state vertical-scroll-proportion="-3.0">
           <caret line="12" column="53" selection-start-line="12" selection-start-column="53" selection-end-line="12" selection-end-column="53" />
           <folding>
-            <element signature="n#create#0;n#Resque_Job_Factory#0;n#!!top" expanded="true" />
+            <element signature="n#create#0;n#Resque_Job_Factory#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -718,8 +669,8 @@
         <state vertical-scroll-proportion="0.3325527">
           <caret line="49" column="27" selection-start-line="49" selection-start-column="27" selection-end-line="49" selection-end-column="27" />
           <folding>
-            <element signature="n#trigger#0;n#Resque_Event#0;n#!!top" expanded="true" />
-            <element signature="n#listen#0;n#Resque_Event#0;n#!!top" expanded="true" />
+            <element signature="n#trigger#0;n#Resque_Event#0;n#!!top" expanded="false" />
+            <element signature="n#listen#0;n#Resque_Event#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -729,9 +680,9 @@
         <state vertical-scroll-proportion="-26.714285">
           <caret line="51" column="47" selection-start-line="51" selection-start-column="47" selection-end-line="51" selection-end-column="47" />
           <folding>
-            <element signature="n#create#0;n#Resque_Failure#0;n#!!top" expanded="true" />
-            <element signature="n#getBackend#0;n#Resque_Failure#0;n#!!top" expanded="true" />
-            <element signature="n#setBackend#0;n#Resque_Failure#0;n#!!top" expanded="true" />
+            <element signature="n#create#0;n#Resque_Failure#0;n#!!top" expanded="false" />
+            <element signature="n#getBackend#0;n#Resque_Failure#0;n#!!top" expanded="false" />
+            <element signature="n#setBackend#0;n#Resque_Failure#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -741,13 +692,13 @@
         <state vertical-scroll-proportion="-8.909091">
           <caret line="183" column="20" selection-start-line="183" selection-start-column="20" selection-end-line="183" selection-end-column="20" />
           <folding>
-            <element signature="n#__construct#0;n#Resque_Job#0;n#!!top" expanded="true" />
-            <element signature="n#reserve#0;n#Resque_Job#0;n#!!top" expanded="true" />
-            <element signature="n#reserveBlocking#0;n#Resque_Job#0;n#!!top" expanded="true" />
-            <element signature="n#getInstance#0;n#Resque_Job#0;n#!!top" expanded="true" />
-            <element signature="n#perform#0;n#Resque_Job#0;n#!!top" expanded="true" />
-            <element signature="n#fail#0;n#Resque_Job#0;n#!!top" expanded="true" />
-            <element signature="n#getJobFactory#0;n#Resque_Job#0;n#!!top" expanded="true" />
+            <element signature="n#__construct#0;n#Resque_Job#0;n#!!top" expanded="false" />
+            <element signature="n#reserve#0;n#Resque_Job#0;n#!!top" expanded="false" />
+            <element signature="n#reserveBlocking#0;n#Resque_Job#0;n#!!top" expanded="false" />
+            <element signature="n#getInstance#0;n#Resque_Job#0;n#!!top" expanded="false" />
+            <element signature="n#perform#0;n#Resque_Job#0;n#!!top" expanded="false" />
+            <element signature="n#fail#0;n#Resque_Job#0;n#!!top" expanded="false" />
+            <element signature="n#getJobFactory#0;n#Resque_Job#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -757,7 +708,7 @@
         <state vertical-scroll-proportion="-3.6662896">
           <caret line="1" column="18" selection-start-line="1" selection-start-column="18" selection-end-line="1" selection-end-column="18" />
           <folding>
-            <element signature="n#My_Redis#0;n#!!top" expanded="true" />
+            <element signature="n#My_Redis#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -775,21 +726,21 @@
         <state vertical-scroll-proportion="-10.126985">
           <caret line="252" column="39" selection-start-line="252" selection-start-column="39" selection-end-line="252" selection-end-column="39" />
           <folding>
-            <element signature="n#__construct#0;n#Resque_Worker#0;n#!!top" expanded="true" />
-            <element signature="n#work#0;n#Resque_Worker#0;n#!!top" expanded="true" />
-            <element signature="n#perform#0;n#Resque_Worker#0;n#!!top" expanded="true" />
-            <element signature="n#reserve#0;n#Resque_Worker#0;n#!!top" expanded="true" />
-            <element signature="n#startup#0;n#Resque_Worker#0;n#!!top" expanded="true" />
-            <element signature="n#updateProcLine#0;n#Resque_Worker#0;n#!!top" expanded="true" />
-            <element signature="n#registerSigHandlers#0;n#Resque_Worker#0;n#!!top" expanded="true" />
-            <element signature="n#pauseProcessing#0;n#Resque_Worker#0;n#!!top" expanded="true" />
-            <element signature="n#unPauseProcessing#0;n#Resque_Worker#0;n#!!top" expanded="true" />
-            <element signature="n#shutdown#0;n#Resque_Worker#0;n#!!top" expanded="true" />
-            <element signature="n#shutdownNow#0;n#Resque_Worker#0;n#!!top" expanded="true" />
-            <element signature="n#killChild#0;n#Resque_Worker#0;n#!!top" expanded="true" />
-            <element signature="n#pruneDeadWorkers#0;n#Resque_Worker#0;n#!!top" expanded="true" />
-            <element signature="n#registerWorker#0;n#Resque_Worker#0;n#!!top" expanded="true" />
-            <element signature="n#workingOn#0;n#Resque_Worker#0;n#!!top" expanded="true" />
+            <element signature="n#__construct#0;n#Resque_Worker#0;n#!!top" expanded="false" />
+            <element signature="n#work#0;n#Resque_Worker#0;n#!!top" expanded="false" />
+            <element signature="n#perform#0;n#Resque_Worker#0;n#!!top" expanded="false" />
+            <element signature="n#reserve#0;n#Resque_Worker#0;n#!!top" expanded="false" />
+            <element signature="n#startup#0;n#Resque_Worker#0;n#!!top" expanded="false" />
+            <element signature="n#updateProcLine#0;n#Resque_Worker#0;n#!!top" expanded="false" />
+            <element signature="n#registerSigHandlers#0;n#Resque_Worker#0;n#!!top" expanded="false" />
+            <element signature="n#pauseProcessing#0;n#Resque_Worker#0;n#!!top" expanded="false" />
+            <element signature="n#unPauseProcessing#0;n#Resque_Worker#0;n#!!top" expanded="false" />
+            <element signature="n#shutdown#0;n#Resque_Worker#0;n#!!top" expanded="false" />
+            <element signature="n#shutdownNow#0;n#Resque_Worker#0;n#!!top" expanded="false" />
+            <element signature="n#killChild#0;n#Resque_Worker#0;n#!!top" expanded="false" />
+            <element signature="n#pruneDeadWorkers#0;n#Resque_Worker#0;n#!!top" expanded="false" />
+            <element signature="n#registerWorker#0;n#Resque_Worker#0;n#!!top" expanded="false" />
+            <element signature="n#workingOn#0;n#Resque_Worker#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -799,34 +750,6 @@
         <state split_layout="FIRST">
           <first_editor vertical-scroll-proportion="0.80487806">
             <caret line="21" column="168" selection-start-line="21" selection-start-column="168" selection-end-line="21" selection-end-column="168" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-      <provider editor-type-id="MarkdownFxPreviewEditor">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/技术文档/Mysql/mysql架构.md">
-      <provider editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="FIRST">
-          <first_editor vertical-scroll-proportion="0.23344947">
-            <caret line="53" column="9" selection-start-line="53" selection-start-column="9" selection-end-line="53" selection-end-column="9" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="MarkdownFxPreviewEditor">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/技术文档/Mysql/基础习惯.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="FIRST">
-          <first_editor vertical-scroll-proportion="0.1533101">
-            <caret line="4" column="22" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="28" />
             <folding />
           </first_editor>
           <second_editor />
@@ -847,6 +770,34 @@
         </state>
       </provider>
       <provider editor-type-id="MarkdownFxPreviewEditor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/技术文档/Mysql/基础习惯.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="FIRST">
+          <first_editor vertical-scroll-proportion="0.1533101">
+            <caret line="4" column="22" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="28" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+      <provider editor-type-id="MarkdownFxPreviewEditor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/技术文档/Mysql/mysql架构.md">
+      <provider editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="FIRST">
+          <first_editor vertical-scroll-proportion="0.23344947">
+            <caret line="53" column="9" selection-start-line="53" selection-start-column="9" selection-end-line="53" selection-end-column="9" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="MarkdownFxPreviewEditor">
         <state />
       </provider>
     </entry>
