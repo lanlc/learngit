@@ -26,7 +26,7 @@
         <entry file="file://$PROJECT_DIR$/服务器/独立服务器搭建总结.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="FIRST">
-              <first_editor vertical-scroll-proportion="0.4216028">
+              <first_editor vertical-scroll-proportion="0.0">
                 <caret line="11" column="28" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
                 <folding />
               </first_editor>
@@ -38,12 +38,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Nginx与PHP.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Nginx与PHP.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/服务器/Nginx与PHP.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="FIRST">
-              <first_editor vertical-scroll-proportion="0.5749129">
-                <caret line="15" column="7" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
+              <first_editor vertical-scroll-proportion="0.5365854">
+                <caret line="14" column="17" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -51,6 +51,105 @@
           </provider>
           <provider editor-type-id="MarkdownFxPreviewEditor">
             <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="readme.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/技术文档/支付相关/readme.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+            <state split_layout="FIRST">
+              <first_editor vertical-scroll-proportion="0.19163764">
+                <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+                <folding />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+          <provider editor-type-id="MarkdownFxPreviewEditor">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="wechatPay.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/技术文档/支付相关/微信支付/wechatPay.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+            <state split_layout="FIRST">
+              <first_editor vertical-scroll-proportion="0.0">
+                <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+                <folding />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+          <provider editor-type-id="MarkdownFxPreviewEditor">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WxPayApi.class.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/技术文档/支付相关/微信支付/WePay/WxPayApi.class.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="98.0">
+              <caret line="34" column="22" selection-start-line="34" selection-start-column="12" selection-end-line="34" selection-end-column="22" />
+              <folding>
+                <element signature="e#1550#3403#0#PHP" expanded="true" />
+                <element signature="e#3721#4800#0#PHP" expanded="true" />
+                <element signature="e#5047#6020#0#PHP" expanded="true" />
+                <element signature="e#6349#7891#0#PHP" expanded="true" />
+                <element signature="e#8277#9433#0#PHP" expanded="true" />
+                <element signature="e#9678#10257#0#PHP" expanded="true" />
+                <element signature="e#10609#11920#0#PHP" expanded="true" />
+                <element signature="e#12095#12971#0#PHP" expanded="true" />
+                <element signature="e#13232#14291#0#PHP" expanded="true" />
+                <element signature="e#14611#15807#0#PHP" expanded="true" />
+                <element signature="e#16036#16519#0#PHP" expanded="true" />
+                <element signature="e#16824#17611#0#PHP" expanded="true" />
+                <element signature="e#17837#18211#0#PHP" expanded="true" />
+                <element signature="e#18319#18600#0#PHP" expanded="true" />
+                <element signature="e#18663#18734#0#PHP" expanded="true" />
+                <element signature="e#18878#20681#0#PHP" expanded="true" />
+                <element signature="e#20925#22805#0#PHP" expanded="true" />
+                <element signature="e#22845#23098#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WxPay.class.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/技术文档/支付相关/微信支付/WxPay.class.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-3.4603174">
+              <caret line="152" column="19" selection-start-line="152" selection-start-column="8" selection-end-line="152" selection-end-column="19" />
+              <folding>
+                <element signature="e#34#70#0#PHP" expanded="true" />
+                <element signature="e#803#1106#0#PHP" expanded="true" />
+                <element signature="e#1140#2848#0#PHP" expanded="true" />
+                <element signature="e#2893#3473#0#PHP" expanded="true" />
+                <element signature="e#3654#4317#0#PHP" expanded="true" />
+                <element signature="e#5312#9701#0#PHP" expanded="true" />
+                <element signature="e#10494#13587#0#PHP" expanded="true" />
+                <element signature="e#13789#15320#0#PHP" expanded="true" />
+                <element signature="e#15989#18447#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WxPayLib.class.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/技术文档/支付相关/微信支付/WePay/WxPayLib.class.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="7.988688">
+              <caret line="214" column="9" selection-start-line="214" selection-start-column="8" selection-end-line="214" selection-end-column="9" />
+              <folding>
+                <element signature="e#6#92#0#PHP" expanded="true" />
+                <element signature="e#1156#1291#0#PHP" expanded="true" />
+                <element signature="e#1700#3428#0#PHP" expanded="true" />
+                <element signature="e#3811#4636#0#PHP" expanded="true" />
+                <element signature="e#4976#5777#0#PHP" expanded="true" />
+                <element signature="e#5783#6098#0#PHP" expanded="true" />
+                <element signature="e#6104#6520#0#PHP" expanded="true" />
+              </folding>
+            </state>
           </provider>
         </entry>
       </file>
@@ -62,10 +161,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/技术文档/redis源码/Redis-Code-master/struct/adlist.h" />
-        <option value="$PROJECT_DIR$/技术文档/redis源码/Redis-Code-master/struct/adlist.c" />
-        <option value="$PROJECT_DIR$/技术文档/redis源码/redis-3.0-annotated-unstable/src/object.c" />
-        <option value="$PROJECT_DIR$/技术文档/redis源码/源码阅读记录/redis的编码检查.md" />
         <option value="$PROJECT_DIR$/技术文档/redis源码/源码阅读记录/链表笔记.md" />
         <option value="$PROJECT_DIR$/技术文档/redis源码/Redis-Code-master/struct/dict.c" />
         <option value="$PROJECT_DIR$/技术文档/redis源码/Redis-Code-master/struct/dict.h" />
@@ -113,6 +208,10 @@
         <option value="$PROJECT_DIR$/工具/Git/命令.md" />
         <option value="$PROJECT_DIR$/服务器/独立服务器搭建总结.md" />
         <option value="$PROJECT_DIR$/服务器/Nginx与PHP.md" />
+        <option value="$PROJECT_DIR$/技术文档/支付相关/readme.md" />
+        <option value="$PROJECT_DIR$/技术文档/支付相关/微信支付/WxPay.class.php" />
+        <option value="$PROJECT_DIR$/技术文档/支付相关/微信支付/WePay/WxPayLib.class.php" />
+        <option value="$PROJECT_DIR$/技术文档/支付相关/微信支付/WePay/WxPayApi.class.php" />
       </list>
     </option>
   </component>
@@ -155,7 +254,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -185,12 +283,53 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="服务器" />
+              <option name="myItemId" value="技术文档" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="learngit" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="blog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="技术文档" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="支付相关" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="learngit" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="blog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="技术文档" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="支付相关" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="微信支付" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -203,6 +342,11 @@
     <property name="js-jscs-nodeInterpreter" value="D:\Node\node.exe" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.JavaScript" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\myGithub\blog\技术文档\支付相关\微信支付" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
@@ -248,7 +392,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="0" width="1932" height="1056" extended-state="1" />
+    <frame x="-8" y="0" width="1932" height="1056" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1565762" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -278,47 +422,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/技术文档/队列/php-resque/lib/Resque/Job.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.909091">
-          <caret line="183" column="20" selection-start-line="183" selection-start-column="20" selection-end-line="183" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/技术文档/redis/redis.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.6662896">
-          <caret line="1" column="18" selection-start-line="1" selection-start-column="18" selection-end-line="1" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/技术文档/redis/testRedis.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/技术文档/队列/php-resque/lib/Resque/Worker.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.126985">
-          <caret line="252" column="39" selection-start-line="252" selection-start-column="39" selection-end-line="252" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/技术文档/队列/php-resque.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="FIRST">
-          <first_editor vertical-scroll-proportion="0.80487806">
-            <caret line="21" column="168" selection-start-line="21" selection-start-column="168" selection-end-line="21" selection-end-column="168" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-      <provider editor-type-id="MarkdownFxPreviewEditor">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/技术文档/Mysql/索引.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="FIRST">
@@ -644,7 +747,6 @@
         <state split_layout="FIRST">
           <first_editor vertical-scroll-proportion="1.0348432">
             <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -664,11 +766,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="5.4875565">
           <caret line="249" column="33" selection-start-line="249" selection-start-column="33" selection-end-line="249" selection-end-column="33" />
-          <folding>
-            <element signature="e#7345#8440#0#PHP" expanded="false" />
-            <element signature="e#8521#8615#0#PHP" expanded="false" />
-            <element signature="e#11825#12384#0#PHP" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -683,10 +780,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.47737557">
           <caret line="22" column="9" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
-          <folding>
-            <element signature="e#26#52#0#PHP" expanded="false" />
-            <element signature="e#1161#1280#0#PHP" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -695,7 +788,6 @@
         <state split_layout="FIRST">
           <first_editor vertical-scroll-proportion="0.19163764">
             <caret line="5" column="31" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -707,7 +799,7 @@
     <entry file="file://$PROJECT_DIR$/服务器/独立服务器搭建总结.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="FIRST">
-          <first_editor vertical-scroll-proportion="0.4216028">
+          <first_editor vertical-scroll-proportion="0.0">
             <caret line="11" column="28" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
             <folding />
           </first_editor>
@@ -721,8 +813,8 @@
     <entry file="file://$PROJECT_DIR$/服务器/Nginx与PHP.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="FIRST">
-          <first_editor vertical-scroll-proportion="0.5749129">
-            <caret line="15" column="7" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
+          <first_editor vertical-scroll-proportion="0.5365854">
+            <caret line="14" column="17" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
             <folding />
           </first_editor>
           <second_editor />
@@ -730,6 +822,95 @@
       </provider>
       <provider editor-type-id="MarkdownFxPreviewEditor">
         <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/技术文档/支付相关/readme.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="FIRST">
+          <first_editor vertical-scroll-proportion="0.19163764">
+            <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+      <provider editor-type-id="MarkdownFxPreviewEditor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/技术文档/支付相关/微信支付/wechatPay.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="FIRST">
+          <first_editor vertical-scroll-proportion="0.0">
+            <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+      <provider editor-type-id="MarkdownFxPreviewEditor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/技术文档/支付相关/微信支付/WePay/WxPayApi.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="98.0">
+          <caret line="34" column="22" selection-start-line="34" selection-start-column="12" selection-end-line="34" selection-end-column="22" />
+          <folding>
+            <element signature="e#1550#3403#0#PHP" expanded="true" />
+            <element signature="e#3721#4800#0#PHP" expanded="true" />
+            <element signature="e#5047#6020#0#PHP" expanded="true" />
+            <element signature="e#6349#7891#0#PHP" expanded="true" />
+            <element signature="e#8277#9433#0#PHP" expanded="true" />
+            <element signature="e#9678#10257#0#PHP" expanded="true" />
+            <element signature="e#10609#11920#0#PHP" expanded="true" />
+            <element signature="e#12095#12971#0#PHP" expanded="true" />
+            <element signature="e#13232#14291#0#PHP" expanded="true" />
+            <element signature="e#14611#15807#0#PHP" expanded="true" />
+            <element signature="e#16036#16519#0#PHP" expanded="true" />
+            <element signature="e#16824#17611#0#PHP" expanded="true" />
+            <element signature="e#17837#18211#0#PHP" expanded="true" />
+            <element signature="e#18319#18600#0#PHP" expanded="true" />
+            <element signature="e#18663#18734#0#PHP" expanded="true" />
+            <element signature="e#18878#20681#0#PHP" expanded="true" />
+            <element signature="e#20925#22805#0#PHP" expanded="true" />
+            <element signature="e#22845#23098#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/技术文档/支付相关/微信支付/WxPay.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.4603174">
+          <caret line="152" column="19" selection-start-line="152" selection-start-column="8" selection-end-line="152" selection-end-column="19" />
+          <folding>
+            <element signature="e#34#70#0#PHP" expanded="true" />
+            <element signature="e#803#1106#0#PHP" expanded="true" />
+            <element signature="e#1140#2848#0#PHP" expanded="true" />
+            <element signature="e#2893#3473#0#PHP" expanded="true" />
+            <element signature="e#3654#4317#0#PHP" expanded="true" />
+            <element signature="e#5312#9701#0#PHP" expanded="true" />
+            <element signature="e#10494#13587#0#PHP" expanded="true" />
+            <element signature="e#13789#15320#0#PHP" expanded="true" />
+            <element signature="e#15989#18447#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/技术文档/支付相关/微信支付/WePay/WxPayLib.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="7.988688">
+          <caret line="214" column="9" selection-start-line="214" selection-start-column="8" selection-end-line="214" selection-end-column="9" />
+          <folding>
+            <element signature="e#6#92#0#PHP" expanded="true" />
+            <element signature="e#1156#1291#0#PHP" expanded="true" />
+            <element signature="e#1700#3428#0#PHP" expanded="true" />
+            <element signature="e#3811#4636#0#PHP" expanded="true" />
+            <element signature="e#4976#5777#0#PHP" expanded="true" />
+            <element signature="e#5783#6098#0#PHP" expanded="true" />
+            <element signature="e#6104#6520#0#PHP" expanded="true" />
+          </folding>
+        </state>
       </provider>
     </entry>
   </component>
