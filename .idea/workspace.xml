@@ -236,24 +236,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="learngit" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="blog" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mysql" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Relational Database Index Design and the Optimzers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -319,18 +301,18 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="0" width="1932" height="1056" extended-state="0" />
-    <editor active="true" />
+    <frame x="-8" y="0" width="1932" height="1056" extended-state="1" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11430062" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11430062" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980973" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6807611" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6807611" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -712,24 +694,24 @@
         <state vertical-scroll-proportion="98.0">
           <caret line="34" column="22" selection-start-line="34" selection-start-column="12" selection-end-line="34" selection-end-column="22" />
           <folding>
-            <element signature="e#1550#3403#0#PHP" expanded="true" />
-            <element signature="e#3721#4800#0#PHP" expanded="true" />
-            <element signature="e#5047#6020#0#PHP" expanded="true" />
-            <element signature="e#6349#7891#0#PHP" expanded="true" />
-            <element signature="e#8277#9433#0#PHP" expanded="true" />
-            <element signature="e#9678#10257#0#PHP" expanded="true" />
-            <element signature="e#10609#11920#0#PHP" expanded="true" />
-            <element signature="e#12095#12971#0#PHP" expanded="true" />
-            <element signature="e#13232#14291#0#PHP" expanded="true" />
-            <element signature="e#14611#15807#0#PHP" expanded="true" />
-            <element signature="e#16036#16519#0#PHP" expanded="true" />
-            <element signature="e#16824#17611#0#PHP" expanded="true" />
-            <element signature="e#17837#18211#0#PHP" expanded="true" />
-            <element signature="e#18319#18600#0#PHP" expanded="true" />
-            <element signature="e#18663#18734#0#PHP" expanded="true" />
-            <element signature="e#18878#20681#0#PHP" expanded="true" />
-            <element signature="e#20925#22805#0#PHP" expanded="true" />
-            <element signature="e#22845#23098#0#PHP" expanded="true" />
+            <element signature="e#1550#3403#0#PHP" expanded="false" />
+            <element signature="e#3721#4800#0#PHP" expanded="false" />
+            <element signature="e#5047#6020#0#PHP" expanded="false" />
+            <element signature="e#6349#7891#0#PHP" expanded="false" />
+            <element signature="e#8277#9433#0#PHP" expanded="false" />
+            <element signature="e#9678#10257#0#PHP" expanded="false" />
+            <element signature="e#10609#11920#0#PHP" expanded="false" />
+            <element signature="e#12095#12971#0#PHP" expanded="false" />
+            <element signature="e#13232#14291#0#PHP" expanded="false" />
+            <element signature="e#14611#15807#0#PHP" expanded="false" />
+            <element signature="e#16036#16519#0#PHP" expanded="false" />
+            <element signature="e#16824#17611#0#PHP" expanded="false" />
+            <element signature="e#17837#18211#0#PHP" expanded="false" />
+            <element signature="e#18319#18600#0#PHP" expanded="false" />
+            <element signature="e#18663#18734#0#PHP" expanded="false" />
+            <element signature="e#18878#20681#0#PHP" expanded="false" />
+            <element signature="e#20925#22805#0#PHP" expanded="false" />
+            <element signature="e#22845#23098#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -739,15 +721,14 @@
         <state vertical-scroll-proportion="-3.4603174">
           <caret line="152" column="19" selection-start-line="152" selection-start-column="8" selection-end-line="152" selection-end-column="19" />
           <folding>
-            <element signature="e#34#70#0#PHP" expanded="true" />
-            <element signature="e#803#1106#0#PHP" expanded="true" />
-            <element signature="e#1140#2848#0#PHP" expanded="true" />
-            <element signature="e#2893#3473#0#PHP" expanded="true" />
-            <element signature="e#3654#4317#0#PHP" expanded="true" />
-            <element signature="e#5312#9701#0#PHP" expanded="true" />
-            <element signature="e#10494#13587#0#PHP" expanded="true" />
-            <element signature="e#13789#15320#0#PHP" expanded="true" />
-            <element signature="e#15989#18447#0#PHP" expanded="true" />
+            <element signature="e#34#70#0#PHP" expanded="false" />
+            <element signature="e#803#1106#0#PHP" expanded="false" />
+            <element signature="e#2893#3473#0#PHP" expanded="false" />
+            <element signature="e#3654#4317#0#PHP" expanded="false" />
+            <element signature="e#5312#9701#0#PHP" expanded="false" />
+            <element signature="e#10494#13587#0#PHP" expanded="false" />
+            <element signature="e#13789#15320#0#PHP" expanded="false" />
+            <element signature="e#15989#18447#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -757,13 +738,13 @@
         <state vertical-scroll-proportion="-214.0">
           <caret line="214" column="9" selection-start-line="214" selection-start-column="8" selection-end-line="214" selection-end-column="9" />
           <folding>
-            <element signature="e#6#92#0#PHP" expanded="true" />
-            <element signature="e#1156#1291#0#PHP" expanded="true" />
-            <element signature="e#1700#3428#0#PHP" expanded="true" />
-            <element signature="e#3811#4636#0#PHP" expanded="true" />
-            <element signature="e#4976#5777#0#PHP" expanded="true" />
-            <element signature="e#5783#6098#0#PHP" expanded="true" />
-            <element signature="e#6104#6520#0#PHP" expanded="true" />
+            <element signature="e#6#92#0#PHP" expanded="false" />
+            <element signature="e#1156#1291#0#PHP" expanded="false" />
+            <element signature="e#1700#3428#0#PHP" expanded="false" />
+            <element signature="e#3811#4636#0#PHP" expanded="false" />
+            <element signature="e#4976#5777#0#PHP" expanded="false" />
+            <element signature="e#5783#6098#0#PHP" expanded="false" />
+            <element signature="e#6104#6520#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
