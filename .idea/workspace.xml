@@ -22,44 +22,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="独立服务器搭建总结.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/服务器/独立服务器搭建总结.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-            <state split_layout="FIRST">
-              <first_editor vertical-scroll-proportion="0.0">
-                <caret line="11" column="28" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
-                <folding />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-          <provider editor-type-id="MarkdownFxPreviewEditor">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Nginx与PHP.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/服务器/Nginx与PHP.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-            <state split_layout="FIRST">
-              <first_editor vertical-scroll-proportion="0.5365854">
-                <caret line="14" column="17" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
-                <folding />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-          <provider editor-type-id="MarkdownFxPreviewEditor">
-            <state />
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="readme.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/技术文档/支付相关/readme.md">
+        <entry file="file://$PROJECT_DIR$/mysql/Relational Database Index Design and the Optimzers/readme.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="FIRST">
               <first_editor vertical-scroll-proportion="0.19163764">
-                <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+                <caret line="5" column="27" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -70,12 +38,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="wechatPay.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/技术文档/支付相关/微信支付/wechatPay.md">
+      <file leaf-file-name="序.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mysql/Relational Database Index Design and the Optimzers/序.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="FIRST">
-              <first_editor vertical-scroll-proportion="0.0">
-                <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <first_editor vertical-scroll-proportion="0.49825785">
+                <caret line="13" column="29" selection-start-line="13" selection-start-column="29" selection-end-line="13" selection-end-column="29" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -86,79 +54,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WxPayApi.class.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/技术文档/支付相关/微信支付/WePay/WxPayApi.class.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="98.0">
-              <caret line="34" column="22" selection-start-line="34" selection-start-column="12" selection-end-line="34" selection-end-column="22" />
-              <folding>
-                <element signature="e#1550#3403#0#PHP" expanded="true" />
-                <element signature="e#3721#4800#0#PHP" expanded="true" />
-                <element signature="e#5047#6020#0#PHP" expanded="true" />
-                <element signature="e#6349#7891#0#PHP" expanded="true" />
-                <element signature="e#8277#9433#0#PHP" expanded="true" />
-                <element signature="e#9678#10257#0#PHP" expanded="true" />
-                <element signature="e#10609#11920#0#PHP" expanded="true" />
-                <element signature="e#12095#12971#0#PHP" expanded="true" />
-                <element signature="e#13232#14291#0#PHP" expanded="true" />
-                <element signature="e#14611#15807#0#PHP" expanded="true" />
-                <element signature="e#16036#16519#0#PHP" expanded="true" />
-                <element signature="e#16824#17611#0#PHP" expanded="true" />
-                <element signature="e#17837#18211#0#PHP" expanded="true" />
-                <element signature="e#18319#18600#0#PHP" expanded="true" />
-                <element signature="e#18663#18734#0#PHP" expanded="true" />
-                <element signature="e#18878#20681#0#PHP" expanded="true" />
-                <element signature="e#20925#22805#0#PHP" expanded="true" />
-                <element signature="e#22845#23098#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="WxPay.class.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/技术文档/支付相关/微信支付/WxPay.class.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.4603174">
-              <caret line="152" column="19" selection-start-line="152" selection-start-column="8" selection-end-line="152" selection-end-column="19" />
-              <folding>
-                <element signature="e#34#70#0#PHP" expanded="true" />
-                <element signature="e#803#1106#0#PHP" expanded="true" />
-                <element signature="e#1140#2848#0#PHP" expanded="true" />
-                <element signature="e#2893#3473#0#PHP" expanded="true" />
-                <element signature="e#3654#4317#0#PHP" expanded="true" />
-                <element signature="e#5312#9701#0#PHP" expanded="true" />
-                <element signature="e#10494#13587#0#PHP" expanded="true" />
-                <element signature="e#13789#15320#0#PHP" expanded="true" />
-                <element signature="e#15989#18447#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="WxPayLib.class.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/技术文档/支付相关/微信支付/WePay/WxPayLib.class.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-214.0">
-              <caret line="214" column="9" selection-start-line="214" selection-start-column="8" selection-end-line="214" selection-end-column="9" />
-              <folding>
-                <element signature="e#6#92#0#PHP" expanded="true" />
-                <element signature="e#1156#1291#0#PHP" expanded="true" />
-                <element signature="e#1700#3428#0#PHP" expanded="true" />
-                <element signature="e#3811#4636#0#PHP" expanded="true" />
-                <element signature="e#4976#5777#0#PHP" expanded="true" />
-                <element signature="e#5783#6098#0#PHP" expanded="true" />
-                <element signature="e#6104#6520#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="库存.md" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/技术文档/业务类型/库存.md">
+      <file leaf-file-name="前言.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/mysql/Relational Database Index Design and the Optimzers/前言.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="FIRST">
-              <first_editor vertical-scroll-proportion="0.73170733">
-                <caret line="108" column="4" selection-start-line="108" selection-start-column="4" selection-end-line="108" selection-end-column="4" />
+              <first_editor vertical-scroll-proportion="0.4599303">
+                <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -177,9 +78,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/技术文档/redis源码/Redis-Code-master/struct/dict.h" />
-        <option value="$PROJECT_DIR$/技术文档/redis源码/Redis-Code-master/struct/t_hash.c" />
-        <option value="$PROJECT_DIR$/技术文档/redis源码/Redis-Code-master/struct/ziplist.c" />
         <option value="$PROJECT_DIR$/技术文档/redis源码/源码阅读记录/哈希笔记.md" />
         <option value="$PROJECT_DIR$/技术文档/redis源码/Redis-Code-master/net/networking.c" />
         <option value="$PROJECT_DIR$/技术文档/redis源码/Redis-Code-master/data/db.c" />
@@ -226,8 +124,11 @@
         <option value="$PROJECT_DIR$/技术文档/支付相关/微信支付/WxPay.class.php" />
         <option value="$PROJECT_DIR$/技术文档/支付相关/微信支付/WePay/WxPayLib.class.php" />
         <option value="$PROJECT_DIR$/技术文档/支付相关/微信支付/WePay/WxPayApi.class.php" />
-        <option value="$PROJECT_DIR$/技术文档/业务类型/库存.md" />
         <option value="$PROJECT_DIR$/自我修养/健身/readme.md" />
+        <option value="$PROJECT_DIR$/mysql/Relational Database Index Design and the Optimzers/readme.md" />
+        <option value="$PROJECT_DIR$/技术文档/业务类型/库存.md" />
+        <option value="$PROJECT_DIR$/mysql/Relational Database Index Design and the Optimzers/序.md" />
+        <option value="$PROJECT_DIR$/mysql/Relational Database Index Design and the Optimzers/前言.md" />
       </list>
     </option>
   </component>
@@ -299,25 +200,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="自我修养" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="learngit" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="blog" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="自我修养" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="健身" />
+              <option name="myItemId" value="技术文档" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -332,6 +215,42 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="技术文档" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="业务类型" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="learngit" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="blog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mysql" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="learngit" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="blog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mysql" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Relational Database Index Design and the Optimzers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -403,7 +322,7 @@
     <frame x="-8" y="0" width="1932" height="1056" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1565762" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11430062" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980973" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -430,52 +349,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/技术文档/Mysql/mysql架构.md">
-      <provider editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="FIRST">
-          <first_editor vertical-scroll-proportion="0.23344947">
-            <caret line="53" column="9" selection-start-line="53" selection-start-column="9" selection-end-line="53" selection-end-column="9" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="MarkdownFxPreviewEditor">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="FIRST">
-          <first_editor vertical-scroll-proportion="0.0">
-            <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-      <provider editor-type-id="MarkdownFxPreviewEditor">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/技术文档/队列/beanktalk/readme.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="FIRST">
-          <first_editor vertical-scroll-proportion="0.8850174">
-            <caret line="33" column="26" selection-start-line="33" selection-start-column="26" selection-end-line="33" selection-end-column="26" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-      <provider editor-type-id="MarkdownFxPreviewEditor">
-        <state />
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/PDO.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.34502262">
-          <caret line="331" column="10" selection-start-line="331" selection-start-column="10" selection-end-line="331" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/技术文档/www/zphp/ZPHP/Db/Pdo.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -909,11 +782,67 @@
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/mysql/中级知识汇总.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="FIRST">
+          <first_editor vertical-scroll-proportion="0.0">
+            <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+      <provider editor-type-id="MarkdownFxPreviewEditor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysql/Relational Database Index Design and the Optimzers/readme.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="FIRST">
+          <first_editor vertical-scroll-proportion="0.19163764">
+            <caret line="5" column="27" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+      <provider editor-type-id="MarkdownFxPreviewEditor">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/技术文档/业务类型/库存.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="FIRST">
-          <first_editor vertical-scroll-proportion="0.73170733">
-            <caret line="108" column="4" selection-start-line="108" selection-start-column="4" selection-end-line="108" selection-end-column="4" />
+          <first_editor vertical-scroll-proportion="0.23344947">
+            <caret line="95" column="58" selection-start-line="95" selection-start-column="58" selection-end-line="95" selection-end-column="58" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+      <provider editor-type-id="MarkdownFxPreviewEditor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysql/Relational Database Index Design and the Optimzers/序.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="FIRST">
+          <first_editor vertical-scroll-proportion="0.49825785">
+            <caret line="13" column="29" selection-start-line="13" selection-start-column="29" selection-end-line="13" selection-end-column="29" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+      <provider editor-type-id="MarkdownFxPreviewEditor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysql/Relational Database Index Design and the Optimzers/前言.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="FIRST">
+          <first_editor vertical-scroll-proportion="0.4599303">
+            <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
             <folding />
           </first_editor>
           <second_editor />
