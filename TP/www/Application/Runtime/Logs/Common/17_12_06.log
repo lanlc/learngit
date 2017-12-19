@@ -1,0 +1,18 @@
+[ 2017-12-06T13:45:53+08:00 ] 192.168.33.1 /Addo_Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001350s ]
+ERR: 无法加载模块:Addo_Index
+
+[ 2017-12-06T13:46:45+08:00 ] 192.168.33.1 /index.php/Addo_Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001121s ]
+ERR: 无法加载模块:Addo_Index
+
+[ 2017-12-06T13:47:18+08:00 ] 192.168.33.1 /Addo_Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001740s ]
+ERR: 无法加载模块:Addo_Index
+
