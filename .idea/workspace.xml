@@ -54,7 +54,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="微信分享.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="微信分享.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/技术文档/微信/业务/微信分享.md">
           <provider editor-type-id="MarkdownFxPreviewEditor">
             <state />
@@ -63,6 +63,22 @@
             <state split_layout="FIRST">
               <first_editor vertical-scroll-proportion="0.9616725">
                 <caret line="50" column="48" selection-start-line="50" selection-start-column="48" selection-end-line="50" selection-end-column="48" />
+                <folding />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="优惠券.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/技术文档/业务类型/优惠券.md">
+          <provider editor-type-id="MarkdownFxPreviewEditor">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+            <state split_layout="FIRST">
+              <first_editor vertical-scroll-proportion="0.80836236">
+                <caret line="72" column="48" selection-start-line="72" selection-start-column="48" selection-end-line="72" selection-end-column="48" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -119,7 +135,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/技术文档/redis源码/源码阅读记录/字符串笔记.md" />
         <option value="$PROJECT_DIR$/技术文档/redis源码/源码阅读记录/列表表笔记.md" />
         <option value="$PROJECT_DIR$/技术文档/redis源码/Redis-Code-master/struct/ziplist.h" />
         <option value="$PROJECT_DIR$/技术文档/redis源码/源码阅读记录/数据结构/压缩链表.md" />
@@ -170,6 +185,7 @@
         <option value="$PROJECT_DIR$/mysql/Relational Database Index Design and the Optimzers/第六章-影响索引设计过程的因素.md" />
         <option value="$PROJECT_DIR$/技术文档/微信/BusinessFile.php" />
         <option value="$PROJECT_DIR$/技术文档/微信/业务/微信分享.md" />
+        <option value="$PROJECT_DIR$/技术文档/业务类型/优惠券.md" />
       </list>
     </option>
   </component>
@@ -261,29 +277,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="微信" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="learngit" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="blog" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="技术文档" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="微信" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="业务" />
+              <option name="myItemId" value="业务类型" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -382,13 +376,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/技术文档/www/zphp/ZPHP/View/Adapter/Php.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.2692307">
-          <caret line="42" column="9" selection-start-line="42" selection-start-column="9" selection-end-line="42" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/技术文档/www/zphp/ZPHP/View/Adapter/Str.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.37330317">
@@ -896,6 +883,20 @@
         <state split_layout="FIRST">
           <first_editor vertical-scroll-proportion="0.9616725">
             <caret line="50" column="48" selection-start-line="50" selection-start-column="48" selection-end-line="50" selection-end-column="48" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/技术文档/业务类型/优惠券.md">
+      <provider editor-type-id="MarkdownFxPreviewEditor">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="FIRST">
+          <first_editor vertical-scroll-proportion="0.80836236">
+            <caret line="72" column="48" selection-start-line="72" selection-start-column="48" selection-end-line="72" selection-end-column="48" />
             <folding />
           </first_editor>
           <second_editor />
