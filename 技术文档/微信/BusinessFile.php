@@ -2,6 +2,7 @@
 
 namespace Business\Wechat;
 
+use Library\wechat\core\OpenAccessToken;
 use Library\wechat\core\OpenWeChatOAuth;
 use Library\wechat\core\WeChatOAuth;
 use Library\wechat\core\OpenUserManage;
@@ -136,5 +137,19 @@ class Authorization{
             throw new \Exception("回调域名错误");
         }
         return true;
+    }
+
+    /**
+     * 获取调用微信js接口的临时票据
+     *
+     * @date   2017-12-19
+     * @author LuoChen Lan
+     *
+     * @param  string  $appId  公众号appid
+     *
+     * @return string
+     */
+    public function getJsApiTicket($appId) {
+        return OpenAccessToken::jsApiTicket($appId);
     }
 }
