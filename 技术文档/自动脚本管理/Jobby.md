@@ -10,3 +10,4 @@
 - 如果没有自动install,需要 composer install
 - 系统crontab添加 ```* * * * * cd /path/to/project && php jobby.php 1>> /dev/null 2>&1```
 - 可以到 ```vendor/hellogerard/jobby/resources/jobby.php```看实例代码，运行该文件，即可看到对应的效果，是不是很方便
+- TP目录下面就安装了可用的源码，直接下载就可以使用
