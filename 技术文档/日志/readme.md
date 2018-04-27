@@ -32,3 +32,5 @@ seaslog.level = 0 ;记录日志级别 默认0(所有日志)
 
 - 重启php-fpm，执行命令php -m，或者phpinfo,检查有没有SeasLog扩展
 
+
+### 官方文档：```https://github.com/Neeke/SeasLog```
