@@ -68,7 +68,7 @@ class ServiceContainer extends Container
     public function __construct(array $config = [], array $prepends = [])
     {
         parent::__construct($prepends);
-
+        //注册各种核心类
         $this->registerConfig($config)
             ->registerProviders()
             ->registerLogger()
@@ -121,6 +121,7 @@ class ServiceContainer extends Container
      */
     protected function registerProviders()
     {
+        //循环注册服务提供者
         foreach ($this->providers as $provider) {
             $this->register(new $provider());
         }

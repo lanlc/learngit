@@ -114,6 +114,16 @@ class Container implements \ArrayAccess
             return $this->values[$id]($this);
         }
 
+        //$raw是获取的是闭包
+        //$raw($this)返回的是实例化的对象User
+
+        /*
+        //这是一个闭包
+        $pimple['user'] = function ($pimple) {
+            return new User($pimple['access_token']);
+        };
+
+         * */
         $raw = $this->values[$id];
         $val = $this->values[$id] = $raw($this);
         $this->raw[$id] = $raw;
@@ -287,6 +297,7 @@ class Container implements \ArrayAccess
      */
     public function register(ServiceProviderInterface $provider, array $values = array())
     {
+        //实例化服务提供者，调用容器Pimple的register方法
         $provider->register($this);
 
         foreach ($values as $key => $value) {

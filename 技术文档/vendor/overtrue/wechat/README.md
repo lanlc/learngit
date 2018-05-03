@@ -69,7 +69,10 @@ $options = [
 // 使用配置来初始化一个公众号应用实例 $app就是一个容器，里面包含了全部信息
 $app = Factory::officialAccount($options);
 
+//访问容器的属性，由于属性是动态的，所以会调用魔术方法__get进而调用offsetGet($id)
 $server = $app->server;
+
+
 $user = $app->user;
 
 $server->push(function($message) use ($user) {
